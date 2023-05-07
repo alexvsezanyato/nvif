@@ -1,11 +1,15 @@
 @extends("layouts.main")
 
+@section("css")
+<link href="/css/pages/main.css" rel="stylesheet">
+@endsection
+
 @section("main-slider")
 <div class="slider-1 slider">
     <div class="slider-item-wrapper" style="background-image:url('/images/coal-2.webp')">
         <div class="slider-item">
             <div class="slider-description">
-                <h1>Уголь в новосибирске</h1>
+                <h1 class="header-text">Уголь в новосибирске</h1>
                 <span style="font-size: 24px">От 1 тонны и выше</span>
             </div>
         </div>
