@@ -29,12 +29,16 @@
                     </div>
 
                     <div class="right">
+                        <span class="schedule">Пн.-Пт.</span>
+
                         <span class="whatsapp">
                             <a href="tel:89963900000" class="whatsapp-icon icon"><i class="fa-brands fa-whatsapp"></i></a>
                         </span>
+
                         <span class="telegram">
                             <a href="tel:89963900000" class="telegram-icon icon"><i class="fa-brands fa-telegram"></i></i></a>
                         </span>
+
                         <span class="phone">
                             <a href="tel:89963900000" class="phone-icon icon"><i class="fa-solid fa-phone"></i></a>
                             <a href="tel:89963900000" class="phone-number">8 (996) 390-00-00</a>
@@ -73,40 +77,42 @@
             </div>
 
             <footer>
-                <div class="wrapper">
-                    <div class="top">
-                        <div class="left">
-                        </div>
+                <div class="footer">
+                    <div class="wrapper">
+                        <div class="top">
+                            <div class="left">
+                            </div>
 
-                        <div class="right">
-                            <span class="whatsapp">
-                                <a href="tel:89963900000" class="whatsapp-icon icon"><i class="fa-brands fa-whatsapp"></i></a>
-                            </span>
-                            <span class="telegram">
-                                <a href="tel:89963900000" class="telegram-icon icon"><i class="fa-brands fa-telegram"></i></i></a>
-                            </span>
-                            <span class="phone">
-                                <a href="tel:89963900000" class="phone-icon icon"><i class="fa-solid fa-phone"></i></a>
-                                <a href="tel:89963900000" class="phone-number">8 (996) 390-00-00</a>
-                            </span>
+                            <div class="right">
+                                <span class="whatsapp">
+                                    <a href="tel:89963900000" class="whatsapp-icon icon"><i class="fa-brands fa-whatsapp"></i></a>
+                                </span>
+                                <span class="telegram">
+                                    <a href="tel:89963900000" class="telegram-icon icon"><i class="fa-brands fa-telegram"></i></i></a>
+                                </span>
+                                <span class="phone">
+                                    <a href="tel:89963900000" class="phone-icon icon"><i class="fa-solid fa-phone"></i></a>
+                                    <a href="tel:89963900000" class="phone-number">8 (996) 390-00-00</a>
+                                </span>
 
-                            <button class="order-call">Заказать звонок</button>
+                                <button class="order-call">Заказать звонок</button>
+                            </div>
                         </div>
-                    </div>
 
                         <div class="footer-separator-wrapper"><hr class="footer-separator"></div>
 
-                    <div class="bottom main-menu footer-menu">
-                        <ul class="link-list">
-                            <li class="item"><a class="link" href="/catalog/coal">Уголь</a></li>
-                            <li class="item"><a class="link" href="/catalog/firewood">Дрова</a></li>
-                        </ul>
+                        <div class="bottom main-menu footer-menu">
+                            <ul class="link-list">
+                                <li class="item"><a class="link" href="/catalog/coal">Уголь</a></li>
+                                <li class="item"><a class="link" href="/catalog/firewood">Дрова</a></li>
+                            </ul>
 
-                        <ul class="link-list">
-                            <li class="item contact-link"><a class="link" href="/contacts">Контакты</a></li>
-                        </ul>
+                            <ul class="link-list">
+                                <li class="item contact-link"><a class="link" href="/contacts">Контакты</a></li>
+                            </ul>
 
-                        <!--<div class="search"><i class="fa-solid fa-magnifying-glass"></i></div>-->
+                            <!--<div class="search"><i class="fa-solid fa-magnifying-glass"></i></div>-->
+                        </div>
                     </div>
                 </div>
             </footer>
