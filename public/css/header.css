@@ -214,9 +214,26 @@ header .right .phone {
     }
 }
 
-@media screen and (max-width: 520px) {
-    header .left .description {
+@media screen and (max-width: 600px) {
+    .slider-1 .slider-item-wrapper {
+        height: 220px;
+    }
+
+    header .logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    header .description {
         display: none;
+    }
+
+    header .order-call {
+        display: none;
+    }
+
+    h1 {
+        font-size: 30px;
     }
 
     header .schedule {

@@ -50,3 +50,9 @@
     cursor: pointer;
 }
 
+@media screen and (max-width: 600px) {
+    .request-form {
+        padding-top: 0;
+        margin-top: 0;
+    }
+}
