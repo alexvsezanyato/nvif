@@ -50,7 +50,7 @@
 
                 <div class="header-separator-wrapper"><hr class="header-separator"></div>
 
-                <div class="main-menu">
+                <nav class="main-menu">
                     <ul class="link-list">
                         <li class="item"><a class="link" href="/">Главная</a></li>
                         <li class="item"><a class="link" href="/catalog">Каталог</a></li>
@@ -63,7 +63,7 @@
                     </ul>
 
                     <!--<div class="search"><i class="fa-solid fa-magnifying-glass"></i></div>-->
-                </div>
+                </nav>
 
                 <div class="header-separator-wrapper"><hr class="header-separator"></div>
 
@@ -101,7 +101,7 @@
 
                         <div class="footer-separator-wrapper"><hr class="footer-separator"></div>
 
-                        <div class="bottom main-menu footer-menu">
+                        <nav class="bottom main-menu footer-menu">
                             <ul class="link-list">
                                 <li class="item"><a class="link" href="/catalog/coal">Уголь</a></li>
                                 <li class="item"><a class="link" href="/catalog/firewood">Дрова</a></li>
@@ -112,7 +112,7 @@
                             </ul>
 
                             <!--<div class="search"><i class="fa-solid fa-magnifying-glass"></i></div>-->
-                        </div>
+                        </nav>
                     </div>
                 </div>
             </footer>
