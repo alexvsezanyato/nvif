@@ -3,7 +3,7 @@
     justify-content: space-between;
     width: 100vw;
     /* overflow: hidden!important; */
-    overflow-x: scroll;
+    overflow-x: auto;
     max-width: 900px;
     padding: 0 10px;
 }
