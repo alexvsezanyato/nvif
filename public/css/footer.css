@@ -55,11 +55,11 @@ footer {
 }
 
 .footer .right .whatsapp-icon {
-    margin-right: 10px;
     color: rgb(67,216,84)!important;
 }
 
 .footer .right .icon {
+    margin-right: 10px;
     width: 30px;
     height: 30px;
     min-width: 30px;
@@ -82,7 +82,6 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 10px;
 }
 
 .footer .right .phone-number:hover {

@@ -40,7 +40,7 @@
                         </span>
 
                         <span class="phone">
-                            <a href="tel:89963900000" class="phone-icon icon"><i class="fa-solid fa-phone"></i></a>
+                            <!--<a href="tel:89963900000" class="phone-icon icon"><i class="fa-solid fa-phone"></i></a>-->
                             <a href="tel:89963900000" class="phone-number">8 (996) 390-00-00</a>
                         </span>
 
@@ -91,7 +91,7 @@
                                     <a href="tel:89963900000" class="telegram-icon icon"><i class="fa-brands fa-telegram"></i></i></a>
                                 </span>
                                 <span class="phone">
-                                    <a href="tel:89963900000" class="phone-icon icon"><i class="fa-solid fa-phone"></i></a>
+                                    <!--<a href="tel:89963900000" class="phone-icon icon"><i class="fa-solid fa-phone"></i></a>-->
                                     <a href="tel:89963900000" class="phone-number">8 (996) 390-00-00</a>
                                 </span>
 
