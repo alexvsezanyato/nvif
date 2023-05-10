@@ -238,4 +238,8 @@ header .right .phone {
     header .schedule {
         display: none!important;
     }
+
+    .header-separator-wrapper {
+        padding: 0;
+    }
 }
