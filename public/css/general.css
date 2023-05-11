@@ -16,6 +16,10 @@ textarea:focus, input:focus{
     outline: none;
 }
 
+body {
+    /* background: hsla(219, 95%, 95%, .5); */
+}
+
 .content {
     width: 100%;
     display: flex;

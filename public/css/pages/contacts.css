@@ -12,7 +12,8 @@
 .contacts .item {
     width: 50%;
     border-radius: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid hsla(219, 15%, 84%, 1);
+    background: #fff;
 }
 
 .contacts .row .item:first-child {
@@ -54,7 +55,11 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.contacts .row:last-child {
+    margin-bottom: 0;
 }
 
 .contacts .description-item {
@@ -74,6 +79,7 @@
     min-height: 30px;
     background: #ddd;
     background: rgb(2%, 32%, 87%, .15);
+    background: hsla(219, 95%, 90%, .8);
     font-size: 12px;
     display: flex;
     align-items: center;
@@ -86,8 +92,20 @@
     font-size: 29px;
 }
 
+.contacts .cards {
+    padding: 10px;
+    background: hsla(219, 95%, 95%, .8);
+    border-radius: 10px;
+}
+
+.ymaps-map {
+    -ms-touch-action: auto !important;
+    touch-action: auto !important;
+}
+
 .contacts .description-title {
-    border-bottom: 1px solid #ddd;
+    /* border-bottom: 1px solid #ddd; */
+    border-bottom: 1px solid hsla(219, 25%, 84%, 1);
     padding-top: 10px;
     padding-bottom: 10px;
     margin-bottom: 10px;
@@ -97,10 +115,15 @@
 @media screen and (max-width: 600px) {
     .contacts .row {
         flex-direction: column;
+        margin-bottom: 0;
     }
 
     .contacts .row .item {
         margin-bottom: 10px;
         width: 100%;
+    }
+
+    .contacts .row .item:last-child {
+        margin-bottom: 0;
     }
 }
