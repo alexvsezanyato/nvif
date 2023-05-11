@@ -2,6 +2,7 @@
 
 @section("css")
 <link href="/css/pages/contacts.css" rel="stylesheet">
+<link href="/css/dark-theme/pages/contacts.css" rel="stylesheet">
 @endsection
 
 @section("breadcrumbs")
@@ -49,6 +50,6 @@
         </div>
     </div>
 
-    <iframe class="map" style="pointer-events: none;" src="https://yandex.ru/map-widget/v1/?scroll=false&um=constructor%3A356bea7be17be57ef30a764bd5f02be68c576674b6dedd99cf73dc26e3255109&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
+    <iframe class="map" src="https://yandex.ru/map-widget/v1/?scroll=false&um=constructor%3A356bea7be17be57ef30a764bd5f02be68c576674b6dedd99cf73dc26e3255109&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
 </div>
 @endsection

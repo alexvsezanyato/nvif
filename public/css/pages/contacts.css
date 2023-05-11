@@ -79,7 +79,7 @@
     min-height: 30px;
     background: #ddd;
     background: rgb(2%, 32%, 87%, .15);
-    background: hsla(219, 95%, 90%, .8);
+    /* background: hsla(219, 35%, 70%, .3); */
     font-size: 12px;
     display: flex;
     align-items: center;

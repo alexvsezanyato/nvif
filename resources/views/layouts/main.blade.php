@@ -16,6 +16,12 @@
         <link href="/css/plain-request-form.css" rel="stylesheet">
         <link href="/css/footer.css" rel="stylesheet">
 
+        <link href="/css/dark-theme/general.css" rel="stylesheet">
+        <link href="/css/dark-theme/header.css" rel="stylesheet">
+        <link href="/css/dark-theme/menu.css" rel="stylesheet">
+        <link href="/css/dark-theme/plain-request-form.css" rel="stylesheet">
+        <link href="/css/dark-theme/footer.css" rel="stylesheet">
+
         @yield("css")
     </head>
 
@@ -45,6 +51,11 @@
                         </span>
 
                         <button class="order-call">Заказать звонок</button>
+
+                        <span class="dark-mode">
+                            <!--<button class="dark-mode-icon icon"><i class="fa-solid fa-sun"></i></button>-->
+                            <button class="dark-mode-icon icon"><i class="fa-solid fa-moon"></i></button>
+                        </span>
                     </div>
                 </header>
 
