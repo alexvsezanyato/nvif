@@ -18,10 +18,12 @@ footer {
 }
 
 .footer {
+    background: #000;
+
+    background: url('/images/coal-2.webp');
     background-size: cover;
     background-position: center;
     background-size: no-repeat;
-    background-image:url('/images/coal-2.webp');
 
     border-radius: 10px;
     /* background: #000; */

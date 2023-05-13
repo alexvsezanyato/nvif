@@ -94,6 +94,7 @@
 
 .contacts .cards {
     padding: 10px;
+    padding-bottom: 0;
     background: hsla(219, 95%, 95%, .8);
     border-radius: 10px;
 }
@@ -121,9 +122,5 @@
     .contacts .row .item {
         margin-bottom: 10px;
         width: 100%;
-    }
-
-    .contacts .row .item:last-child {
-        margin-bottom: 0;
     }
 }
