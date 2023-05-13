@@ -17,11 +17,12 @@ textarea:focus, input:focus{
 }
 
 body {
-    /* background: hsla(219, 95%, 95%, .5); */
-    /* background: hsla(220, 17%, 14%, 1); */
-    /* background: #000; */
     background: hsla(219, 95%, 2%, 1);
     color: #fff;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
 }
 
 .content {
@@ -43,4 +44,6 @@ body > .wrapper {
     flex-direction: column;
     justify-content: space-between;
     min-height: 100vh;
+    width: 100%;
+    align-items: center;
 }

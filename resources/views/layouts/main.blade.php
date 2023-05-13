@@ -16,11 +16,11 @@
         <link href="/css/plain-request-form.css" rel="stylesheet">
         <link href="/css/footer.css" rel="stylesheet">
 
-        <link href="/css/dark-theme/general.css" rel="stylesheet">
+        <!--<link href="/css/dark-theme/general.css" rel="stylesheet">
         <link href="/css/dark-theme/header.css" rel="stylesheet">
         <link href="/css/dark-theme/menu.css" rel="stylesheet">
         <link href="/css/dark-theme/plain-request-form.css" rel="stylesheet">
-        <link href="/css/dark-theme/footer.css" rel="stylesheet">
+        <link href="/css/dark-theme/footer.css" rel="stylesheet">-->
 
         @yield("css")
     </head>
@@ -29,54 +29,57 @@
         <div class="wrapper">
             <div class="top">
                 <header>
-                    <div class="left">
-                        <img src="/images/logo.webp" class="logo" alt="logo">
-                        <span class="description">Достаквка угля и древесины</span>
+                    <div class="row general">
+                        <div class="row">
+                            <img src="/images/logo.webp" class="logo" alt="logo">
+                            <span class="description">Достаквка угля и древесины</span>
+                        </div>
+
+                        <div class="row">
+                            <span class="schedule">Пн.-Пт.</span>
+
+                            <span class="whatsapp">
+                                <a href="tel:89963900000" class="whatsapp-icon icon"><i class="fa-brands fa-whatsapp"></i></a>
+                            </span>
+
+                            <span class="telegram">
+                                <a href="tel:89963900000" class="telegram-icon icon"><i class="fa-brands fa-telegram"></i></i></a>
+                            </span>
+
+                            <span class="phone">
+                                <!--<a href="tel:89963900000" class="phone-icon icon"><i class="fa-solid fa-phone"></i></a>-->
+                                <a href="tel:89963900000" class="phone-number">8 (996) 390-00-00</a>
+                            </span>
+
+                            <button class="order-call">Заказать звонок</button>
+
+                            <span class="dark-mode">
+                                <!--<button class="dark-mode-icon icon"><i class="fa-solid fa-sun"></i></button>-->
+                                <button class="dark-mode-icon icon"><i class="fa-solid fa-moon"></i></button>
+                            </span>
+                        </div>
                     </div>
 
-                    <div class="right">
-                        <span class="schedule">Пн.-Пт.</span>
+                    <div class="header-separator-wrapper"><hr class="header-separator"></div>
 
-                        <span class="whatsapp">
-                            <a href="tel:89963900000" class="whatsapp-icon icon"><i class="fa-brands fa-whatsapp"></i></a>
-                        </span>
+                    <nav class="row main-menu">
+                        <ul class="link-list">
+                            <li class="item"><a class="link" href="/">Главная</a></li>
+                            <li class="item"><a class="link" href="/catalog">Каталог</a></li>
+                            <li class="item"><a class="link" href="/catalog/coal">Уголь</a></li>
+                            <li class="item"><a class="link" href="/catalog/firewood">Дрова</a></li>
+                        </ul>
 
-                        <span class="telegram">
-                            <a href="tel:89963900000" class="telegram-icon icon"><i class="fa-brands fa-telegram"></i></i></a>
-                        </span>
+                        <ul class="link-list">
+                            <li class="item contact-link"><a class="link" href="/contacts">Контакты</a></li>
+                        </ul>
 
-                        <span class="phone">
-                            <!--<a href="tel:89963900000" class="phone-icon icon"><i class="fa-solid fa-phone"></i></a>-->
-                            <a href="tel:89963900000" class="phone-number">8 (996) 390-00-00</a>
-                        </span>
-
-                        <button class="order-call">Заказать звонок</button>
-
-                        <span class="dark-mode">
-                            <!--<button class="dark-mode-icon icon"><i class="fa-solid fa-sun"></i></button>-->
-                            <button class="dark-mode-icon icon"><i class="fa-solid fa-moon"></i></button>
-                        </span>
-                    </div>
+                        <!--<div class="search"><i class="fa-solid fa-magnifying-glass"></i></div>-->
+                    </nav>
                 </header>
 
                 <div class="header-separator-wrapper"><hr class="header-separator"></div>
 
-                <nav class="main-menu">
-                    <ul class="link-list">
-                        <li class="item"><a class="link" href="/">Главная</a></li>
-                        <li class="item"><a class="link" href="/catalog">Каталог</a></li>
-                        <li class="item"><a class="link" href="/catalog/coal">Уголь</a></li>
-                        <li class="item"><a class="link" href="/catalog/firewood">Дрова</a></li>
-                    </ul>
-
-                    <ul class="link-list">
-                        <li class="item contact-link"><a class="link" href="/contacts">Контакты</a></li>
-                    </ul>
-
-                    <!--<div class="search"><i class="fa-solid fa-magnifying-glass"></i></div>-->
-                </nav>
-
-                <div class="header-separator-wrapper"><hr class="header-separator"></div>
 
                 @yield("breadcrumbs")
 

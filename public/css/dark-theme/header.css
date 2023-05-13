@@ -1,53 +1,36 @@
-body {
-    display: flex;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
-}
-
-body > .wrapper {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 header {
     display: flex;
     justify-content: space-between;
     width: 100%;
     max-width: 900px;
-    padding: 10px;
+    margin: 5px;
+    margin-bottom: 0;
+    padding: 0;
+    /* background: hsla(220, 17%, 14%, 1); */
+    background: hsla(220, 17%, 20%, 1);
+    border-radius: 10px;
 }
 
-header .right {
+header .general {
     display: flex;
     align-items: center;
-    background: hsla(220, 17%, 14%, 1);
-    border-radius: 10px;
-    padding-left: 10px;
+    padding: 0;
+    padding: 10px;
+    border-bottom: 1px solid hsla(220, 17%, 30%, 1);
 }
 
-header .right .schedule {
+header .general .schedule {
     display: flex;
     padding-right: 10px;
 }
 
-header .right .whatsapp-icon {
-}
-
 header .dark-mode-icon {
+    margin-right: 0!important;
     margin-left: 10px;
     width: 30px;
     height: 30px;
     min-width: 30px;
     min-height: 30px;
-    /* background: #e9e9e9; */
-    /* background: hsla(219, 94%, 7%, 1); */
-    /* background: hsla(200, 100%, 46%, 1);; */
-    /* color: #0652DD; */
-    /* color: hsla(200, 100%, 46%, 1);; */
-    /* background: hsla(200, 100%, 10%, 1);; */
     color: hsla(200, 100%, 46%, 1);
     background: hsla(200, 100%, 15%, 1);;
     display: flex;
@@ -64,34 +47,34 @@ header .dark-mode-icon:hover {
     background: #000;
 }
 
-header .right .telegram-icon, header .right .whatsapp-icon {
+header .genral .telegram-icon, header .general .whatsapp-icon {
     font-size: 29px;
     color: #0652DD;
     transition: color .1s;
 }
 
-header .right .telegram-icon {
+header .general .telegram-icon {
     color: hsla(200, 100%, 46%, 1);
     border-radius: 30px;
 }
 
-header .right .whatsapp-icon {
+header .general .whatsapp-icon {
     color: rgb(67,216,84);
 }
 
-header .right .phone-icon:hover {
+header .general .phone-icon:hover {
     box-shadow: 0 0 0 7px hsla(219, 94%, 45%, .2);
 }
 
-header .right .telegram-icon:hover {
+header .general .telegram-icon:hover {
     color: rgb(0,136,204);
 }
 
-header .right .whatsapp-icon:hover {
+header .general .whatsapp-icon:hover {
     color: rgb(67,216,84);
 }
 
-header .right .icon {
+header .general .icon {
     margin-right: 10px;
     width: 30px;
     height: 30px;
@@ -99,7 +82,7 @@ header .right .icon {
     min-height: 30px;
 }
 
-header .right .phone-icon {
+header .general .phone-icon {
     border-radius: 30px;
     margin-left: 10px;
     transition: box-shadow .1s;
@@ -117,10 +100,7 @@ header .right .phone-icon {
     justify-content: center;
 }
 
-header .right .phone-number:hover {
-}
-
-header .right .phone-number {
+header .general .phone-number {
     height: 18px;
     white-space: nowrap;
     color: #fff;
@@ -129,7 +109,7 @@ header .right .phone-number {
     border-bottom: 1px dashed #fff;
 }
 
-header .right .order-call {
+header .general .order-call {
     padding: 6px;
     border: 1px solid #0652DD;
     border-radius: 10px;
@@ -150,7 +130,7 @@ header .right .order-call {
     white-space: nowrap;
 }
 
-header .right .order-call:hover {
+header .general .order-call:hover {
     background: hsla(219, 2%, 2%, 1);
     color: #fff;
     border: 1px solid #000;
@@ -159,19 +139,11 @@ header .right .order-call:hover {
 header .logo {
     width: 30px;
     height: 30px;
-    border-radius: 5px;
+    border-radius: 15px;
     margin-right: 10px;
 }
 
-header .left {
-    display: flex;
-    align-items: center;
-    background: hsla(220, 17%, 14%, 1);
-    padding: 10px;
-    border-radius: 10px;
-}
-
-header .right .phone {
+header .general .phone {
     display: flex;
     align-items: center;
 }
@@ -243,10 +215,9 @@ header .right .phone {
 }
 
 .breadcrumb-item {
-    color: #333;
+    color: hsla(220, 10%, 38%, 1);
     display: flex;
     align-items: center;
-    color: #
 }
 
 .breadcrumb-delimiter {
@@ -257,12 +228,12 @@ header .right .phone {
 }
 
 .breadcrumb a {
-    color: #777;
+    color: hsla(220, 10%, 60%, 1);
     text-decoration: none;
 }
 
 @media screen and (max-width: 740px) {
-    header .left .description {
+    header .general .description {
         display: none;
     }
 }
