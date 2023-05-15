@@ -37,3 +37,10 @@ Route::get('/', function () {
 Route::get('/contacts', function () {
     return view('contacts');
 });
+
+Route::get('/debug', function (Request $request) {
+    // dump($request::all());
+    // dd($request->ip());
+
+    dd($request::ip());
+});

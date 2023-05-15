@@ -15,7 +15,6 @@ body > .wrapper {
 header {
     display: flex;
     flex-direction: column;
-    padding: 5px;
 }
 
 header .general {
@@ -90,7 +89,7 @@ header .general .order-call {
     border: 1px solid #0652DD;
     border-radius: 100px;
     height: 30px;
-    background: hsla(219, 95%, 95%, .8);
+    /* background: hsla(219, 95%, 95%, .8); */
     color: #0652DD;
     padding: 0 10px;
     cursor: pointer;
