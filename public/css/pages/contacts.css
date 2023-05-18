@@ -116,7 +116,7 @@
 @media screen and (max-width: 600px) {
     .contacts .row {
         flex-direction: column;
-        margin-bottom: 0;
+        margin-bottom: 0!important;
     }
 
     .contacts .row .item {
