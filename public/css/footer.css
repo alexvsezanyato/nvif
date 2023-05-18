@@ -1,66 +1,49 @@
 footer {
-    width: 100%;
-    padding: 10px;
-    padding-top: 10px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    background: url("/images/coal-2-modified.webp");
+
+    font-size: 14px;
 }
 
-.footer .top, .footer .bottom {
+footer .general .description {
+    font-weight: 900;
+}
+
+footer .general {
     display: flex;
     justify-content: space-between;
     width: 100%;
-}
-
-.footer .top {
+    max-width: 900px;
     padding: 10px;
 }
 
-.footer {
-    background: #000;
-
-    background: url('/images/coal-2.webp');
-    background-size: cover;
-    background-position: center;
-    background-size: no-repeat;
-
-    border-radius: 10px;
-    /* background: #000; */
-    color: #fff;
-    width: 100%;
-    max-width: 900px;
-    overflow: hidden;
-}
-
-.footer > .wrapper {
-    background: rgba(0, 0, 0, .85);
-}
-
-.footer .right {
+footer .general .row {
     display: flex;
     align-items: center;
 }
 
-.footer .right .telegram-icon, .footer .right .whatsapp-icon {
-    font-size: 30px;
-    color: #fff;
+footer .general .schedule {
+    display: flex;
+    padding-right: 10px;
+}
+
+footer .general .telegram-icon {
+    color: hsla(200, 100%, 46%, 1);
+}
+
+footer .general .whatsapp-icon {
+    color: hsla(127, 66%, 55%, 1);
+}
+
+footer .general .telegram-icon:hover, footer .general .whatsapp-icon:hover {
+    color: rgba(6, 82, 221, .8);
+}
+
+footer .general .icon {
+    font-size: 29px;
     transition: color .1s;
-}
 
-.footer .right .telegram-icon {
-    color: rgb(0,136,204);
-}
-
-.footer .right .phone-icon {
-    /* background: #075BF7!important; */
-}
-
-.footer .right .whatsapp-icon {
-    color: rgb(67,216,84)!important;
-}
-
-.footer .right .icon {
     margin-right: 10px;
     width: 30px;
     height: 30px;
@@ -68,28 +51,166 @@ footer {
     min-height: 30px;
 }
 
-.footer .right .phone-icon {
+footer .general .icon.dark-mode-icon {
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+    min-height: 30px;
+    background: #e9e9e9;
+    background: rgb(2%, 32%, 87%, .15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    color: #0652DD;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+footer .general .icon.dark-mode-icon {
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+    min-height: 30px;
+    color: hsla(200, 100%, 46%, 1);
+    background: hsla(200, 100%, 20%, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+
+    margin-right: 0;
+}
+
+footer .general .phone-icon {
     border-radius: 30px;
     margin-left: 10px;
     transition: box-shadow .1s;
     text-decoration: none;
     padding: 5px;
+    color: #fff;
     width: 30px;
     height: 30px;
     min-width: 30px;
-    color: #000;
     min-height: 30px;
-    background: #fff;
+    background: #0652DD;
     font-size: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.footer .right .phone-number:hover {
+footer .general .phone-number {
+    height: 18px;
+    white-space: nowrap;
+    color: #000;
+    margin-right: 10px;
+    text-decoration: none;
+    border-bottom: 1px dashed #000;
 }
 
-.footer .right .phone-number {
+footer .general .order-call {
+    padding: 5px;
+    border: 1px solid #0652DD;
+    border-radius: 100px;
+    height: 30px;
+    background: hsla(219, 95%, 95%, .8);
+    color: #0652DD;
+    padding: 0 10px;
+    cursor: pointer;
+    transition: background .1s, color .1s;
+    white-space: nowrap;
+}
+
+footer .general .order-call:hover {
+    background: #0652DD;
+    color: #fff;
+}
+
+footer .logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+footer .general .phone {
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width: 740px) {
+    footer .general .description {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    footer .logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    footer .description {
+        display: none;
+    }
+
+    footer .order-call {
+        display: none;
+    }
+
+    footer .schedule {
+        display: none!important;
+    }
+}
+
+footer {
+    margin: 5px;
+    padding: 0;
+
+    border-radius: 10px;
+    /* background: hsla(220, 17%, 12%, 1); */
+
+    background: url('/images/coal-2-modified.webp');
+    background-size: cover;
+    background-position: center;
+    background-size: no-repeat;
+    overflow: hidden;
+}
+
+footer > * {
+    background: hsla(220, 17%, 12%, .8);
+}
+
+footer .general {
+    padding: 8px 10px;
+    display: flex;
+    border-bottom: 1px solid hsla(220, 17%, 22%, .8);
+}
+
+footer .general .icon {
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+    min-height: 30px;
+}
+
+footer .general .icon:hover {
+    color: #fff;
+}
+
+footer .dark-mode-icon:hover {
+    color: #fff;
+    background: #000;
+}
+
+footer .general .phone-number {
     height: 18px;
     white-space: nowrap;
     color: #fff;
@@ -98,71 +219,62 @@ footer {
     border-bottom: 1px dashed #fff;
 }
 
-.footer .right .order-call:hover {
-    background: #fff;
-    color: #000;
-}
-
-.footer .right .order-call {
-    padding: 5px;
+footer .general .order-call {
+    padding: 6px;
+    border-radius: 10px;
+    font-weight: 900;
+    height: 30px;
+    background: hsla(200, 100%, 46%, 1);
     border: none;
     color: #fff;
-    border: 1px solid #fff;
-    background: rgba(0,0,0,0);
-    border-radius: 100px;
-    height: 30px;
+    /* border: 1px solid hsla(220, 17%, 14%, 1); */
+    border: none;
+    font-size: 13px;
+
     padding: 0 10px;
     cursor: pointer;
-    transition: background .1s, color .1s;
+    transition: background .1s, color .1s, border .1s;
     white-space: nowrap;
 }
 
-.footer .right .order-call:hover {
-}
-
-.footer .logo {
-    width: 50px;
-    height: 50px;
-    border-radius: 5px;
-    margin-right: 10px;
-}
-
-.footer .left {
-    display: flex;
-    align-items: center;
-}
-
-.footer .right .phone {
-    display: flex;
-    align-items: center;
-}
-
-.footer-separator-wrapper {
-    width: 100%;
-    max-width: 900px;
-    height: 1px;
-}
-
-.footer-separator {
-    width 100%;
-    border: none;
-    height: 1px;
-    padding: 0;
-    margin: 0;
-    background: rgba(238, 238, 238, .2);
-}
-
-.footer-menu {
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-.footer-menu .link-list .item > a {
+footer .general .order-call:hover {
+    background: hsla(219, 2%, 2%, 1);
     color: #fff;
+    border: none;
+}
+
+footer .logo {
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+}
+
+footer .general .phone {
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width: 740px) {
+    footer .general .description {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 600px) {
+    footer .logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    footer .description {
+        display: none;
+    }
+
     footer .order-call {
         display: none;
+    }
+
+    footer .schedule {
+        display: none!important;
     }
 }

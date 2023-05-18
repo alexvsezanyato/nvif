@@ -1,77 +1,39 @@
 header {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 900px;
-    margin: 5px;
-    margin-bottom: 0;
-    padding: 0;
-    /* background: hsla(220, 17%, 14%, 1); */
-    background: hsla(220, 17%, 20%, 1);
+    padding: 5px;
+    /* border-radius: 10px; */
+    overflow: hidden;
+    border-radius: 0 0 10px 10px;
+}
+
+header .wrapper {
     border-radius: 10px;
+    overflow: hidden;
+    max-width: 100%;
+
+    background: hsla(220, 17%, 12%, 1);
+
+    /* background: url('/images/coal-2-modified.webp'); */
+    background-size: cover;
+    background-position: center;
+    background-size: no-repeat;
+
+    overflow: hidden;
+
+    font-size: 14px;
+}
+
+header > .wrapper > * {
+    background: hsla(220, 17%, 12%, .88);
 }
 
 header .general {
-    display: flex;
-    align-items: center;
-    padding: 0;
-    padding: 10px;
-    border-bottom: 1px solid hsla(220, 17%, 30%, 1);
+    padding: 8px 10px;
+
+    border-bottom: 1px solid hsla(220, 17%, 22%, .8);
 }
 
-header .general .schedule {
-    display: flex;
-    padding-right: 10px;
-}
-
-header .dark-mode-icon {
-    margin-right: 0!important;
-    margin-left: 10px;
-    width: 30px;
-    height: 30px;
-    min-width: 30px;
-    min-height: 30px;
-    color: hsla(200, 100%, 46%, 1);
-    background: hsla(200, 100%, 15%, 1);;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 30px;
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-header .dark-mode-icon:hover {
-    color: #fff;
-    background: #000;
-}
-
-header .genral .telegram-icon, header .general .whatsapp-icon {
-    font-size: 29px;
-    color: #0652DD;
-    transition: color .1s;
-}
-
-header .general .telegram-icon {
-    color: hsla(200, 100%, 46%, 1);
-    border-radius: 30px;
-}
-
-header .general .whatsapp-icon {
-    color: rgb(67,216,84);
-}
-
-header .general .phone-icon:hover {
-    box-shadow: 0 0 0 7px hsla(219, 94%, 45%, .2);
-}
-
-header .general .telegram-icon:hover {
-    color: rgb(0,136,204);
-}
-
-header .general .whatsapp-icon:hover {
-    color: rgb(67,216,84);
+header .general .description {
+    font-weight: 900;
 }
 
 header .general .icon {
@@ -82,22 +44,13 @@ header .general .icon {
     min-height: 30px;
 }
 
-header .general .phone-icon {
-    border-radius: 30px;
-    margin-left: 10px;
-    transition: box-shadow .1s;
-    text-decoration: none;
-    padding: 5px;
+header .general .icon:hover {
     color: #fff;
-    width: 30px;
-    height: 30px;
-    min-width: 30px;
-    min-height: 30px;
-    background: #0652DD;
-    font-size: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+}
+
+header .dark-mode-icon:hover {
+    color: #fff;
+    background: #000;
 }
 
 header .general .phone-number {
@@ -111,18 +64,15 @@ header .general .phone-number {
 
 header .general .order-call {
     padding: 6px;
-    border: 1px solid #0652DD;
     border-radius: 10px;
     font-weight: 900;
     height: 30px;
-    /* background: hsla(203, 94%, 69%, 1); */
     background: hsla(200, 100%, 46%, 1);
-    /* background: hsla(220, 17%, 20%, 1); */
     border: none;
-    /* color: #fff; */
-    /* color: hsla(220, 94%, 7%, 1); */
     color: #fff;
-    border: 1px solid hsla(220, 17%, 14%, 1);
+    /* border: 1px solid hsla(220, 17%, 14%, 1); */
+    border: none;
+    font-size: 13px;
 
     padding: 0 10px;
     cursor: pointer;
@@ -133,14 +83,13 @@ header .general .order-call {
 header .general .order-call:hover {
     background: hsla(219, 2%, 2%, 1);
     color: #fff;
-    border: 1px solid #000;
+    border: none;
 }
 
 header .logo {
     width: 30px;
     height: 30px;
     border-radius: 15px;
-    margin-right: 10px;
 }
 
 header .general .phone {
@@ -202,34 +151,6 @@ header .general .phone {
     width: 100%;
     max-width: 900px;
     padding: 10px;
-}
-
-.breadcrumb {
-    width: 100%;
-    max-width: 900px;
-    display: flex;
-    list-style-type: none;
-    padding: 10px;
-    margin: 0;
-    font-size: 14px;
-}
-
-.breadcrumb-item {
-    color: hsla(220, 10%, 38%, 1);
-    display: flex;
-    align-items: center;
-}
-
-.breadcrumb-delimiter {
-    margin-left: 10px;
-    margin-right: 10px;
-    font-size: 9px;
-    /* color: #0652DD; */
-}
-
-.breadcrumb a {
-    color: hsla(220, 10%, 60%, 1);
-    text-decoration: none;
 }
 
 @media screen and (max-width: 740px) {

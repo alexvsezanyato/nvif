@@ -6,9 +6,16 @@ use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Event;
+use Illuminate\Bus\Queueable;
+use function Illuminate\Events\queueable;
+
+use App\Events\OrderArrived;
+use App\Listeners\OrderArrivedMail;
 
 class EventServiceProvider extends ServiceProvider
 {
+    use Queueable;
+
     /**
      * The event to listener mappings for the application.
      *
@@ -18,6 +25,9 @@ class EventServiceProvider extends ServiceProvider
         Registered::class => [
             SendEmailVerificationNotification::class,
         ],
+        # OrderArrived::class => [
+        #     OrderArrivedMail::class
+        # ]
     ];
 
     /**
@@ -25,7 +35,13 @@ class EventServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        # Event::listen(OrderArrived::class, [
+        #     OrderArrivedMail::class
+        # ]);
+
+        Event::listen(queueable(function(OrderArrived $event) {
+            file_put_contents($_SERVER["DOCUMENT_ROOT"] . "/debug.txt", "debug");
+        })->onQueue("emails")->delay(1000));
     }
 
     /**

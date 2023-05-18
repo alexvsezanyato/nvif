@@ -1,27 +1,26 @@
-body {
-    display: flex;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
-}
+header {
+    top: 0;
+    position: fixed;
 
-body > .wrapper {
-    width: 100%;
+    max-width: 900px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: hsla(220, 17%, 5%, 1);
+    height: 100px;
 }
 
-header {
+header .wrapper {
+    max-width: 100%;
     display: flex;
     flex-direction: column;
 }
 
 header .general {
+    height: 50%;
     display: flex;
     justify-content: space-between;
     width: 100%;
-    max-width: 900px;
     padding: 10px;
 }
 
@@ -35,14 +34,12 @@ header .general .schedule {
     padding-right: 10px;
 }
 
-header .general .telegram-icon, header .general .whatsapp-icon {
-    font-size: 29px;
-    color: #0652DD;
-    transition: color .1s;
+header .general .telegram-icon {
+    color: hsla(200, 100%, 46%, 1);
 }
 
-header .general .phone-icon:hover {
-    box-shadow: 0 0 0 7px hsla(219, 94%, 45%, .2);
+header .general .whatsapp-icon {
+    color: hsla(127, 66%, 55%, 1);
 }
 
 header .general .telegram-icon:hover, header .general .whatsapp-icon:hover {
@@ -50,11 +47,50 @@ header .general .telegram-icon:hover, header .general .whatsapp-icon:hover {
 }
 
 header .general .icon {
+    font-size: 29px;
+    transition: color .1s;
+
     margin-right: 10px;
     width: 30px;
     height: 30px;
     min-width: 30px;
     min-height: 30px;
+}
+
+header .general .icon.dark-mode-icon {
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+    min-height: 30px;
+    background: #e9e9e9;
+    background: rgb(2%, 32%, 87%, .15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    color: #0652DD;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+header .general .icon.dark-mode-icon {
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+    min-height: 30px;
+    color: hsla(200, 100%, 46%, 1);
+    background: hsla(200, 100%, 20%, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+
+    margin-right: 0;
 }
 
 header .general .phone-icon {
@@ -114,22 +150,6 @@ header .general .phone {
     align-items: center;
 }
 
-.header-separator-wrapper {
-    width: 100%;
-    max-width: 900px;
-    padding: 0 10px;
-    height: 1px;
-}
-
-.header-separator {
-    width 100%;
-    border: none;
-    height: 1px;
-    padding: 0;
-    margin: 0;
-    background: #ddd;
-}
-
 .slider {
     font-weight: 700;
 }
@@ -170,52 +190,6 @@ header .general .phone {
     width: 100%;
     max-width: 900px;
     padding: 10px;
-}
-
-.breadcrumb {
-    width: 100%;
-    max-width: 900px;
-    display: flex;
-    list-style-type: none;
-    padding: 10px;
-    margin: 0;
-    font-size: 14px;
-}
-
-.breadcrumb-item {
-    color: #333;
-    display: flex;
-    align-items: center;
-}
-
-.breadcrumb-delimiter {
-    margin-left: 10px;
-    margin-right: 10px;
-    font-size: 9px;
-    /* color: #0652DD; */
-}
-
-.breadcrumb a {
-    color: #777;
-    text-decoration: none;
-}
-
-header .dark-mode-icon {
-    margin-left: 10px;
-    width: 30px;
-    height: 30px;
-    min-width: 30px;
-    min-height: 30px;
-    background: #e9e9e9;
-    background: rgb(2%, 32%, 87%, .15);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 30px;
-    color: #0652DD;
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
 }
 
 @media screen and (max-width: 740px) {

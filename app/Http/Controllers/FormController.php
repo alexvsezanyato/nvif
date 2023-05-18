@@ -7,11 +7,14 @@ use App\Services\MailService;
 use PHPMailer\PHPMailer\PHPMailer;
 use Mail;
 use App\Mail\RequestMail;
+use App\Events\OrderArrived;
 
 class FormController extends Controller
 {
     public function requestAction(Request $request, PHPMailer $phpMailer) {
-        Mail::to(env("MAIL_RECIEVER"))->send(new RequestMail($request->post()));
+        OrderArrived::dispatch($request->post());
+
+        # Mail::to(env("MAIL_RECIEVER"))->send(new RequestMail($request->post()));
         return back()->withInput();
 
         # $phpMailer->isSMTP();                                            //Send using SMTP
