@@ -28,3 +28,8 @@
     font-weight: 900;
     display: block;
 }
+
+.submenu .list .item .catalog.link {
+    background: hsla(140, 100%, 29%, 1);
+    /* background: hsla(200, 100%, 46%, 1); */
+}

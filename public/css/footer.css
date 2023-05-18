@@ -1,9 +1,21 @@
 footer {
+    padding: 5px;
+}
+
+footer .container {
+    border-radius: 10px;
+    overflow: hidden;
+
     display: flex;
     flex-direction: column;
     background: url("/images/coal-2-modified.webp");
+    background-size: cover;
+    background-position: center;
+    background-size: no-repeat;
 
     font-size: 14px;
+    max-width: 900px;
+    width: 100%;
 }
 
 footer .general .description {
@@ -169,21 +181,7 @@ footer .general .phone {
     }
 }
 
-footer {
-    margin: 5px;
-    padding: 0;
-
-    border-radius: 10px;
-    /* background: hsla(220, 17%, 12%, 1); */
-
-    background: url('/images/coal-2-modified.webp');
-    background-size: cover;
-    background-position: center;
-    background-size: no-repeat;
-    overflow: hidden;
-}
-
-footer > * {
+footer > .container > * {
     background: hsla(220, 17%, 12%, .8);
 }
 

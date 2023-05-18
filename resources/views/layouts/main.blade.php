@@ -33,56 +33,55 @@
         <div class="wrapper">
             <div class="top">
                 <header>
-                    <div class="container">
-                        <div class="wrapper">
-                            <div class="row general">
-                                <div class="row">
-                                    <img src="/images/logo.webp" class="logo" alt="logo">
-                                    <span class="description">Достаквка угля и древесины</span>
-                                </div>
-
-                                <div class="row">
-                                    <span class="schedule">Пн.-Пт.</span>
-
-                                    <span class="whatsapp">
-                                        <a href="tel:89963900000" class="whatsapp-icon icon"><i class="fa-brands fa-whatsapp"></i></a>
-                                    </span>
-
-                                    <span class="telegram">
-                                        <a href="tel:89963900000" class="telegram-icon icon"><i class="fa-brands fa-telegram"></i></i></a>
-                                    </span>
-
-                                    <span class="phone">
-                                        <!--<a href="tel:89963900000" class="phone-icon icon"><i class="fa-solid fa-phone"></i></a>-->
-                                        <a href="tel:89963900000" class="phone-number">8 (996) 390-00-00</a>
-                                    </span>
-
-                                    <button class="order-call">Заказать звонок</button>
-
-                                    <span class="dark-mode">
-                                        <button class="icon dark-mode-icon"><i class="fa-solid fa-moon"></i></button>
-                                    </span>
-                                </div>
+                    <div class="wrapper">
+                        <div class="row general">
+                            <div class="row">
+                                <img src="/images/logo.webp" class="logo" alt="logo">
+                                <span class="description">Достаквка угля и древесины</span>
                             </div>
 
-                            <div class="row main-menu">
-                                <div class="link-list">
-                                    <div class="item"><a class="link" href="/">Главная</a></div>
-                                    <div class="item"><a class="link" href="/catalog">Каталог</a></div>
-                                </div>
+                            <div class="row">
+                                <span class="schedule">Пн.-Пт.</span>
 
-                                <div class="link-list">
-                                    <div class="item contact-link"><a class="link" href="/contacts">Контакты</a></div>
-                                    <!--<li class="search"><i class="fa-solid fa-magnifying-glass"></i></li>-->
-                                </div>
+                                <span class="whatsapp">
+                                    <a href="tel:89963900000" class="whatsapp-icon icon"><i class="fa-brands fa-whatsapp"></i></a>
+                                </span>
 
+                                <span class="telegram">
+                                    <a href="tel:89963900000" class="telegram-icon icon"><i class="fa-brands fa-telegram"></i></i></a>
+                                </span>
+
+                                <span class="phone">
+                                    <!--<a href="tel:89963900000" class="phone-icon icon"><i class="fa-solid fa-phone"></i></a>-->
+                                    <a href="tel:89963900000" class="phone-number">8 (996) 390-00-00</a>
+                                </span>
+
+                                <button class="order-call">Заказать звонок</button>
+
+                                <span class="dark-mode">
+                                    <button class="icon dark-mode-icon"><i class="fa-solid fa-moon"></i></button>
+                                </span>
                             </div>
+                        </div>
+
+                        <div class="row main-menu">
+                            <div class="link-list">
+                                <div class="item"><a class="link" href="/">Главная</a></div>
+                                <div class="item"><a class="link" href="/catalog">Каталог</a></div>
+                            </div>
+
+                            <div class="link-list">
+                                <div class="item contact-link"><a class="link" href="/contacts">Контакты</a></div>
+                                <!--<li class="search"><i class="fa-solid fa-magnifying-glass"></i></li>-->
+                            </div>
+
                         </div>
                     </div>
                 </header>
 
                 <nav class="row submenu">
                     <ul class="list">
+                        <li class="item"><a class="link catalog" href="/catalog/catalog"><i class="fa-solid fa-list-ul"></i> Каталог</a></li>
                         <li class="item"><a class="link" href="/catalog/coal">Уголь</a></li>
                         <li class="item"><a class="link" href="/catalog/firewood">Дрова</a></li>
                         <li class="item"><a class="link" href="/catalog/firewood">Перегной</a></li>
@@ -99,48 +98,49 @@
             </div>
 
             <footer>
-                <div class="row general">
-                    <div class="row">
-                        <img src="/images/logo.webp" class="logo" alt="logo">
-                        <span class="description">Достаквка угля и древесины</span>
+                <div class="container">
+                    <div class="row general">
+                        <div class="row">
+                            <img src="/images/logo.webp" class="logo" alt="logo">
+                            <span class="description">Достаквка угля и древесины</span>
+                        </div>
+
+                        <div class="row">
+                            <span class="schedule">Пн.-Пт.</span>
+
+                            <span class="whatsapp">
+                                <a href="tel:89963900000" class="whatsapp-icon icon"><i class="fa-brands fa-whatsapp"></i></a>
+                            </span>
+
+                            <span class="telegram">
+                                <a href="tel:89963900000" class="telegram-icon icon"><i class="fa-brands fa-telegram"></i></i></a>
+                            </span>
+
+                            <span class="phone">
+                                <!--<a href="tel:89963900000" class="phone-icon icon"><i class="fa-solid fa-phone"></i></a>-->
+                                <a href="tel:89963900000" class="phone-number">8 (996) 390-00-00</a>
+                            </span>
+
+                            <button class="order-call">Заказать звонок</button>
+
+                            <span class="dark-mode">
+                                <button class="icon dark-mode-icon"><i class="fa-solid fa-moon"></i></button>
+                            </span>
+                        </div>
                     </div>
 
-                    <div class="row">
-                        <span class="schedule">Пн.-Пт.</span>
+                    <nav class="row main-menu">
+                        <ul class="link-list">
+                            <li class="item"><a class="link" href="/">Главная</a></li>
+                            <li class="item"><a class="link" href="/catalog">Каталог</a></li>
+                        </ul>
 
-                        <span class="whatsapp">
-                            <a href="tel:89963900000" class="whatsapp-icon icon"><i class="fa-brands fa-whatsapp"></i></a>
-                        </span>
-
-                        <span class="telegram">
-                            <a href="tel:89963900000" class="telegram-icon icon"><i class="fa-brands fa-telegram"></i></i></a>
-                        </span>
-
-                        <span class="phone">
-                            <!--<a href="tel:89963900000" class="phone-icon icon"><i class="fa-solid fa-phone"></i></a>-->
-                            <a href="tel:89963900000" class="phone-number">8 (996) 390-00-00</a>
-                        </span>
-
-                        <button class="order-call">Заказать звонок</button>
-
-                        <span class="dark-mode">
-                            <button class="icon dark-mode-icon"><i class="fa-solid fa-moon"></i></button>
-                        </span>
-                    </div>
+                        <ul class="link-list">
+                            <li class="item contact-link"><a class="link" href="/contacts">Контакты</a></li>
+                            <!--<li class="search"><i class="fa-solid fa-magnifying-glass"></i></li>-->
+                        </ul>
+                    </nav>
                 </div>
-
-                <nav class="row main-menu">
-                    <ul class="link-list">
-                        <li class="item"><a class="link" href="/">Главная</a></li>
-                        <li class="item"><a class="link" href="/catalog">Каталог</a></li>
-                    </ul>
-
-                    <ul class="link-list">
-                        <li class="item contact-link"><a class="link" href="/contacts">Контакты</a></li>
-                        <!--<li class="search"><i class="fa-solid fa-magnifying-glass"></i></li>-->
-                    </ul>
-
-                </nav>
             </footer>
         </div>
     </body>
