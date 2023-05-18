@@ -27,11 +27,4 @@
     font-size: 14px;
     font-weight: 900;
     display: block;
-    transition: background .1s, color .1s;
 }
-
-.submenu .list .item .link:hover {
-    background: hsla(220, 30%, 90%, 1);
-    color: #000;
-}
-
