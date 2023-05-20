@@ -18,13 +18,17 @@
         <link href="/css/plain-request-form.css" rel="stylesheet">
         <link href="/css/footer.css" rel="stylesheet">
 
-        <link href="/css/dark-theme/general.css" rel="stylesheet">
-        <link href="/css/dark-theme/submenu.css" rel="stylesheet">
-        <link href="/css/dark-theme/breadcrumbs.css" rel="stylesheet">
-        <link href="/css/dark-theme/header.css" rel="stylesheet">
-        <link href="/css/dark-theme/menu.css" rel="stylesheet">
-        <link href="/css/dark-theme/plain-request-form.css" rel="stylesheet">
-        <link href="/css/dark-theme/footer.css" rel="stylesheet">
+        <link href="/css/white-theme/header.css" rel="stylesheet">
+        <link href="/css/white-theme/breadcrumbs.css" rel="stylesheet">
+        <link href="/css/white-theme/footer.css" rel="stylesheet">
+
+        <!--<link href="/css/dark-theme/general.css" rel="stylesheet">-->
+        <!--<link href="/css/dark-theme/submenu.css" rel="stylesheet">-->
+        <!--<link href="/css/dark-theme/breadcrumbs.css" rel="stylesheet">-->
+        <!--<link href="/css/dark-theme/header.css" rel="stylesheet">-->
+        <!--<link href="/css/dark-theme/menu.css" rel="stylesheet">-->
+        <!--<link href="/css/dark-theme/plain-request-form.css" rel="stylesheet">-->
+        <!--<link href="/css/dark-theme/footer.css" rel="stylesheet">-->
 
         @yield("css")
     </head>

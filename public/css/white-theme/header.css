@@ -1,0 +1,70 @@
+.main-menu .link {
+    padding: 14px 0;
+    font-size: 14px;
+}
+
+body {
+    background: #eee;
+}
+
+header {
+    padding: 5px;
+}
+
+header .wrapper {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, .15);
+}
+
+header .main-menu {
+    height: 50%;
+    max-height: 50%;
+    overflow: hidden;
+}
+
+header .general {
+    border-bottom: 1px solid rgba(0, 0, 0, .15);
+    height: 50%;
+    max-height: 50%;
+}
+
+header .order-call {
+    font-size: 14px;
+}
+
+header .logo {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+header .general .dark-mode-icon {
+    color: #000!important;
+    background: rgba(0,0,0,.15)!important;
+}
+
+header .general .order-call {
+    padding: 6px;
+    border-radius: 10px;
+    font-weight: 900;
+    height: 30px;
+    background: hsla(200, 100%, 46%, 1);
+    border: none;
+    color: #fff;
+    /* border: 1px solid hsla(220, 17%, 14%, 1); */
+    border: none;
+    font-size: 13px;
+
+    padding: 0 10px;
+    cursor: pointer;
+    transition: background .1s, color .1s, border .1s;
+    white-space: nowrap;
+}
+
+header .general .order-call:hover {
+    background: hsla(219, 2%, 2%, 1);
+    color: #fff;
+    border: none;
+}

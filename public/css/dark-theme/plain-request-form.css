@@ -21,7 +21,9 @@
 }
 
 .request-form [type=submit]:hover {
-    background: #000;
-    border: 1px solid #000;
+    /* background: #000; */
+    /* border: 1px solid #000; */
+    background: hsla(200, 84%, 20%, 1);
+    border: 1px solid hsla(200, 84%, 20%, 1);
     border-top: none;
 }

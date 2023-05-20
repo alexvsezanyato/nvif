@@ -1,0 +1,12 @@
+.contacts .row:last-child {
+    padding-bottom: 10px;
+}
+
+.contacts .cards {
+    padding: 0;
+    background: none;
+}
+
+.contacts {
+    padding: 5px;
+}

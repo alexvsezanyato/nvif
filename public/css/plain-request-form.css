@@ -15,7 +15,6 @@
     border-bottom: none;
     border-radius: 10px 10px 0 0;
     overflow: hidden;
-    height: 131px;
 }
 
 .request-form .input-list input:first-child {
@@ -29,6 +28,7 @@
     align-items: center;
     justify-content: center;
     font-weight: 900;
+    display: none;
 }
 
 .request-form .input-list input {

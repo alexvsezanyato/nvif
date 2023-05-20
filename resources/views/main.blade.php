@@ -2,6 +2,7 @@
 
 @section("css")
 <link href="/css/pages/main.css" rel="stylesheet">
+<!--<link href="/css/dark-theme/pages/main.css" rel="stylesheet">-->
 @endsection
 
 @section("main-slider")
