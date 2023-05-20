@@ -1,52 +1,22 @@
 header {
-    padding: 5px;
-    width: 100%;
-    overflow: hidden;
-    border-radius: 0 0 10px 10px;
     background: hsla(220, 17%, 5%, 1);
 }
 
 header .wrapper {
-    border-radius: 10px;
-    overflow: hidden;
-    max-width: 100%;
-
     background: hsla(220, 17%, 12%, 1);
-
-    /* background: url('/images/coal-2-modified.webp'); */
-    background-size: cover;
-    background-position: center;
-    background-size: no-repeat;
-
-    overflow: hidden;
-
-    font-size: 14px;
 }
 
 header > .wrapper > * {
     background: hsla(220, 17%, 12%, .88);
 }
 
-header .general {
-    padding: 8px 10px;
-
-    border-bottom: 1px solid hsla(220, 17%, 22%, .8);
-}
-
-header .general .description {
-    font-weight: 900;
-}
-
-header .general .icon {
-    margin-right: 10px;
-    width: 30px;
-    height: 30px;
-    min-width: 30px;
-    min-height: 30px;
-}
-
 header .general .icon:hover {
     color: #fff;
+}
+
+header .general .dark-mode-icon {
+    color: hsla(200, 100%, 46%, 1);
+    background: hsla(200, 100%, 20%, 1);
 }
 
 header .dark-mode-icon:hover {
@@ -55,87 +25,21 @@ header .dark-mode-icon:hover {
 }
 
 header .general .phone-number {
-    height: 18px;
-    white-space: nowrap;
     color: #fff;
-    margin-right: 10px;
-    text-decoration: none;
     border-bottom: 1px dashed #fff;
 }
 
 header .general .order-call {
-    padding: 6px;
-    border-radius: 10px;
-    font-weight: 900;
-    height: 30px;
     background: hsla(200, 100%, 46%, 1);
-    border: none;
     color: #fff;
-    /* border: 1px solid hsla(220, 17%, 14%, 1); */
-    border: none;
-    font-size: 13px;
-
-    padding: 0 10px;
-    cursor: pointer;
-    transition: background .1s, color .1s, border .1s;
-    white-space: nowrap;
 }
 
 header .general .order-call:hover {
     background: hsla(219, 2%, 2%, 1);
     color: #fff;
-    border: none;
 }
 
-header .logo {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-}
-
-header .general .phone {
-    display: flex;
-    align-items: center;
-}
-
-.header-separator-wrapper {
-    display: none;
-}
-
-.header-separator {
-    width 100%;
-    border: none;
-    height: 1px;
-    padding: 0;
-    margin: 0;
-    background: #ddd;
-    background: hsla(220, 17%, 11%, 1);
-}
-
-@media screen and (max-width: 740px) {
-    header .general .description {
-        display: none;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    header .description {
-        display: none;
-    }
-
-    header .order-call {
-        display: none;
-    }
-
-    h1 {
-        font-size: 30px;
-    }
-
-    header .schedule {
-        display: none!important;
-    }
-
-    .header-separator-wrapper {
-        padding: 0;
-    }
+header .general .phone-number {
+    border-bottom: 1px dashed #fff;
+    color: #fff;
 }

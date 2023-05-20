@@ -3,9 +3,9 @@
 @section("css")
 <link href="/css/pages/contacts.css" rel="stylesheet">
 
-<link href="/css/white-theme/pages/contacts.css" rel="stylesheet">
+<!--<link href="/css/white-theme/pages/contacts.css" rel="stylesheet">-->
 
-<!--<link href="/css/dark-theme/pages/contacts.css" rel="stylesheet">-->
+<link href="/css/dark-theme/pages/contacts.css" rel="stylesheet">
 @endsection
 
 @section("breadcrumbs")

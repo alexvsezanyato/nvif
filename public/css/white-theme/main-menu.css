@@ -1,0 +1,11 @@
+.main-menu .link {
+    color: #000;
+}
+
+.main-menu .link:hover {
+    /* color: #444; */
+}
+
+.main-menu .link:hover {
+    color: #0652DD;
+}

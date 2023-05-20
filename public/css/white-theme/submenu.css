@@ -1,0 +1,21 @@
+.submenu .list .item .link {
+    /* background: hsla(220, 17%, 20%, .5); */
+    /* color: #fff; */
+    background: #fff;
+    color: #000;
+}
+
+.submenu .list .item .link:hover {
+    background: #000;
+    color: #fff;
+}
+
+.submenu .list .item .catalog.link {
+    background: hsla(140, 100%, 29%, 1);
+    color: #fff;
+}
+
+.submenu .list .item .catalog.link:hover {
+    background: #000;
+    color: #fff;
+}

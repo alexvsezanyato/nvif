@@ -1,9 +1,7 @@
 .main-menu .link {
-    padding: 14px 0;
     color: #fff;
-    font-size: 14px;
 }
 
-.main-menu .item:hover .link {
+.main-menu .item .link:hover {
     color: #999;
 }

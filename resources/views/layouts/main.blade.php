@@ -10,25 +10,29 @@
         <link rel="preconnect" href="https://fonts.bunny.net">
 
         <link href="/fontawesome/css/all.css" rel="stylesheet">
+
         <link href="/css/general.css" rel="stylesheet">
         <link href="/css/header.css" rel="stylesheet">
-        <link href="/css/submenu.css" rel="stylesheet">
         <link href="/css/menu.css" rel="stylesheet">
+        <link href="/css/submenu.css" rel="stylesheet">
         <link href="/css/breadcrumbs.css" rel="stylesheet">
         <link href="/css/plain-request-form.css" rel="stylesheet">
         <link href="/css/footer.css" rel="stylesheet">
 
         <link href="/css/white-theme/header.css" rel="stylesheet">
+        <link href="/css/white-theme/main-menu.css" rel="stylesheet">
+        <link href="/css/white-theme/submenu.css" rel="stylesheet">
+        <link href="/css/white-theme/general.css" rel="stylesheet">
         <link href="/css/white-theme/breadcrumbs.css" rel="stylesheet">
         <link href="/css/white-theme/footer.css" rel="stylesheet">
 
-        <!--<link href="/css/dark-theme/general.css" rel="stylesheet">-->
-        <!--<link href="/css/dark-theme/submenu.css" rel="stylesheet">-->
-        <!--<link href="/css/dark-theme/breadcrumbs.css" rel="stylesheet">-->
-        <!--<link href="/css/dark-theme/header.css" rel="stylesheet">-->
-        <!--<link href="/css/dark-theme/menu.css" rel="stylesheet">-->
-        <!--<link href="/css/dark-theme/plain-request-form.css" rel="stylesheet">-->
-        <!--<link href="/css/dark-theme/footer.css" rel="stylesheet">-->
+        <!--<link href="/css/dark-theme/general.css" rel="stylesheet">
+        <link href="/css/dark-theme/submenu.css" rel="stylesheet">
+        <link href="/css/dark-theme/breadcrumbs.css" rel="stylesheet">
+        <link href="/css/dark-theme/header.css" rel="stylesheet">
+        <link href="/css/dark-theme/menu.css" rel="stylesheet">
+        <link href="/css/dark-theme/plain-request-form.css" rel="stylesheet">
+        <link href="/css/dark-theme/footer.css" rel="stylesheet">-->
 
         @yield("css")
     </head>
@@ -48,11 +52,11 @@
                                 <span class="schedule">Пн.-Пт.</span>
 
                                 <span class="whatsapp">
-                                    <a href="tel:89963900000" class="whatsapp-icon icon"><i class="fa-brands fa-whatsapp"></i></a>
+                                    <a href="tel:89963900000" class="whatsapp-icon contact-icon icon"><i class="fa-brands fa-whatsapp"></i></a>
                                 </span>
 
                                 <span class="telegram">
-                                    <a href="tel:89963900000" class="telegram-icon icon"><i class="fa-brands fa-telegram"></i></i></a>
+                                    <a href="tel:89963900000" class="telegram-icon contact-icon icon"><i class="fa-brands fa-telegram"></i></i></a>
                                 </span>
 
                                 <span class="phone">
