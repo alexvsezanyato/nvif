@@ -4,6 +4,7 @@ header {
     width: 100%;
 
     padding: 5px;
+    padding-top: 0;
 
     display: flex;
     flex-direction: column;
@@ -28,7 +29,15 @@ header .wrapper {
     border-radius: 10px;
 
     font-size: 14px;
+    border: 1px solid;
+}
 
+header .container {
+    height: 100%;
+    width: 100%;
+    padding-top: 5px;
+    background: hsla(200, 5%, 95%, 1);
+    border-radius: 0 0 50% 50%;
 }
 
 header .general {
@@ -40,7 +49,7 @@ header .general {
 
     padding: 0 10px;
 
-    border-bottom: 1px solid hsla(220, 17%, 22%, .8);
+    border-bottom: 1px solid;
 }
 
 header .general .description {
@@ -128,6 +137,7 @@ header .general .phone-number {
     white-space: nowrap;
     margin-right: 10px;
     text-decoration: none;
+    border-bottom: 1px dashed;
 }
 
 header .general .order-call {

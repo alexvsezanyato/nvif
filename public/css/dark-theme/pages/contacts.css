@@ -1,113 +1,32 @@
-.contacts {
-    width: 100%;
-    max-width: 900px;
-    padding: 5px;
-    padding-bottom: 0;
-}
-
-.contacts .description {
-    display: flex;
-    flex-direction: column;
-}
-
 .contacts .item {
-    width: 50%;
-    border-radius: 10px;
     background: hsla(220, 17%, 20%, 1);
-    /* border: 1px solid hsla(219, 15%, 84%, 1); */
-    border: none;
-}
-
-.contacts .row .item:first-child {
-    margin-right: 10px;
-}
-
-.contacts .description-item:last-child {
+    /* border-color: hsla(219, 15%, 84%, 1); */
     border: none;
 }
 
 .contacts .description-item:last-child {
-    padding-bottom: 10px;
-}
-
-.contacts .description-item {
-    display: flex;
-    align-items: center;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-bottom: 10px;
+    border: none;
 }
 
 .contacts .description-item a {
     color: #fff;
 }
 
-.contacts .description-item:last-child {
-    margin-bottom: 0;
-}
-
-.contacts .map {
-    margin-top: 5px;
-    overflow: hidden;
-    border-radius: 10px;
-}
-
 .contacts a {
     color: #000;
-    text-decoration: none;
-}
-
-.contacts .row:last-child {
-    margin-bottom: 0;
-}
-
-.contacts .description-item {
-    display: flex;
-    font-size: 14px;
 }
 
 .contacts .description-item .icon {
-    border-radius: 30px;
-    transition: box-shadow .1s;
-    text-decoration: none;
-    padding: 5px;
     color: hsla(200, 100%, 46%, 1);
-    width: 30px;
-    height: 30px;
-    min-width: 30px;
-    min-height: 30px;
     background: hsla(200, 100%, 15%, 1);
-    font-size: 13px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 10px;
-}
-
-.contacts .description-item .icon.without-background {
-    background: none;
-    font-size: 29px;
 }
 
 .contacts .cards {
-    padding: 5px;
-    background: hsla(219, 0%, 0%, .8);
+    /* background: hsla(219, 0%, 0%, .8); */
     background: hsla(220, 17%, 14%, 1);
 }
 
 .contacts .description-title {
-    /* border-bottom: 1px solid #ddd; */
-    border-bottom: 1px solid hsla(220, 17%, 30%, 1);
-}
-
-.contacts .row {
-    margin-bottom: 5px;
-}
-
-.contacts .row .item {
-    margin-right: 5px!important;
-}
-
-.contacts .row .item:last-child {
-    margin-right: 0!important;
+    /* border-bottom-color: #ddd; */
+    border-bottom-color: hsla(220, 17%, 30%, 1);
 }

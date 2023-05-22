@@ -1,20 +1,20 @@
 header .wrapper {
     background: #fff;
-    border: 1px solid rgba(0, 0, 0, .15);
+    border-color: hsla(220, 15%, 70%, .5);
 }
 
 header .general {
-    border-bottom: 1px solid rgba(0, 0, 0, .15);
+    border-bottom-color: hsla(220, 15%, 70%, .5);
 }
 
 header .general .dark-mode-icon {
     color: #000;
-    background: rgba(0,0,0,.15);
+    background: hsla(220, 15%, 70%, .5);
 }
 
 header .general .dark-mode-icon:hover {
     color: #fff;
-    background: #555;
+    background: hsla(220, 15%, 15%, .5);
 }
 
 header .general .order-call {
@@ -28,7 +28,7 @@ header .general .order-call:hover {
 }
 
 header .general .phone-number {
-    border-bottom: 1px dashed #000;
+    border-bottom-color: #000;
     color: #000;
 }
 

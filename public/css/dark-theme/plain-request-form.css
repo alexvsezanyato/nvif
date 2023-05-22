@@ -1,29 +1,21 @@
 .request-form .input-list {
-    border: 1px solid hsla(220, 17%, 22%, 1);
-    border-bottom: none;
+    border-color: hsla(220, 17%, 22%, 1);
 }
 
 .request-form .input-list input {
     background: hsla(220, 17%, 12%, 1);
-    border-top: 1px solid hsla(220, 17%, 22%, 1);
+    border-top-color: hsla(220, 17%, 22%, 1);
     color: #fff;
 }
 
-.request-form .input-list input:first-child {
-    border-top: none;
-}
-
 .request-form [type=submit] {
-    border: 1px solid hsla(200, 84%, 44%, 1);
-    border-top: none;
+    border-color: hsla(200, 84%, 44%, 1);
     background: hsla(200, 84%, 44%, 1);
-    transition: background .1s, border .1s;
 }
 
 .request-form [type=submit]:hover {
     /* background: #000; */
-    /* border: 1px solid #000; */
+    /* border-color: #000; */
     background: hsla(200, 84%, 20%, 1);
-    border: 1px solid hsla(200, 84%, 20%, 1);
-    border-top: none;
+    border-color: hsla(200, 84%, 20%, 1);
 }

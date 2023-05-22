@@ -7,5 +7,6 @@
 }
 
 .main-menu .link:hover {
-    color: #0652DD;
+    /* color: #0652DD; */
+    color: #555;
 }

@@ -11,7 +11,7 @@
 .request-form .input-list {
     display: flex;
     flex-direction: column;
-    border: 1px solid #aaa;
+    border: 1px solid;
     border-bottom: none;
     border-radius: 10px 10px 0 0;
     overflow: hidden;
@@ -34,20 +34,18 @@
 .request-form .input-list input {
     padding: 14px;
     border: none;
-    border-top: 1px solid #aaa;
+    border-top: 1px solid;
 }
 
 .request-form [type=submit] {
     padding: 14px;
     border: none;
-    border-top: 1px solid #aaa;
+    border-top: 1px solid;
     width: 100%;
     border-radius: 0 0 10px 10px;
 
-    background: #0652DD;
-    color: #fff;
     font-weight: 900;
-    border: 1px solid #0652DD;
+    border: 1px solid;
     cursor: pointer;
 }
 

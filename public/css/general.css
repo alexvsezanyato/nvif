@@ -23,6 +23,7 @@ body {
     justify-content: center;
     padding: 0;
     margin: 0;
+    overflow-y: scroll;
     /* background: #fff!important; */
 }
 

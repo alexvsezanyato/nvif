@@ -4,6 +4,7 @@ header {
 
 header .wrapper {
     background: hsla(220, 17%, 12%, 1);
+    border-color: rgba(0, 0, 0, .15);
 }
 
 header > .wrapper > * {
@@ -26,7 +27,7 @@ header .dark-mode-icon:hover {
 
 header .general .phone-number {
     color: #fff;
-    border-bottom: 1px dashed #fff;
+    border-bottom-color: #fff;
 }
 
 header .general .order-call {
@@ -40,6 +41,6 @@ header .general .order-call:hover {
 }
 
 header .general .phone-number {
-    border-bottom: 1px dashed #fff;
+    border-bottom-color: #fff;
     color: #fff;
 }

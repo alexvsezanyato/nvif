@@ -1,7 +1,7 @@
 .contacts {
     width: 100%;
     max-width: 900px;
-    padding: 10px;
+    padding: 5px;
 }
 
 .contacts .description {
@@ -12,12 +12,11 @@
 .contacts .item {
     width: 50%;
     border-radius: 10px;
-    border: 1px solid hsla(219, 15%, 84%, 1);
-    background: #fff;
+    border: 1px solid;
 }
 
 .contacts .row .item:first-child {
-    margin-right: 10px;
+    margin-right: 5px;
 }
 
 .contacts .description-item:last-child {
@@ -47,7 +46,6 @@
 }
 
 .contacts a {
-    color: #000;
     text-decoration: none;
 }
 
@@ -55,7 +53,7 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .contacts .row:last-child {
@@ -72,14 +70,10 @@
     transition: box-shadow .1s;
     text-decoration: none;
     padding: 5px;
-    color: #0652DD;
     width: 30px;
     height: 30px;
     min-width: 30px;
     min-height: 30px;
-    background: #ddd;
-    background: rgb(2%, 32%, 87%, .15);
-    /* background: hsla(219, 35%, 70%, .3); */
     font-size: 12px;
     display: flex;
     align-items: center;
@@ -93,10 +87,9 @@
 }
 
 .contacts .cards {
-    padding: 10px;
-    padding-bottom: 0;
-    background: hsla(219, 95%, 95%, .8);
+    padding: 5px;
     border-radius: 10px;
+    border: 1px solid;
 }
 
 .ymaps-map {
@@ -105,11 +98,10 @@
 }
 
 .contacts .description-title {
-    /* border-bottom: 1px solid #ddd; */
-    border-bottom: 1px solid hsla(219, 25%, 84%, 1);
+    border-bottom: 1px solid;
     padding-top: 10px;
     padding-bottom: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     font-size: 16px;
 }
 
