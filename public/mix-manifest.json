@@ -1,0 +1,14 @@
+{
+    "/css/skeleton.css": "/css/skeleton.css",
+    "/css/white-theme.css": "/css/white-theme.css",
+    "/css/dark-theme.css": "/css/dark-theme.css",
+    "/css/skeleton/contacts.css": "/css/skeleton/contacts.css",
+    "/css/skeleton/main.css": "/css/skeleton/main.css",
+    "/css/skeleton/plain-request-form.css": "/css/skeleton/plain-request-form.css",
+    "/css/white-theme/contacts.css": "/css/white-theme/contacts.css",
+    "/css/white-theme/main.css": "/css/white-theme/main.css",
+    "/css/white-theme/plain-request-form.css": "/css/white-theme/plain-request-form.css",
+    "/css/dark-theme/contacts.css": "/css/dark-theme/contacts.css",
+    "/css/dark-theme/main.css": "/css/dark-theme/main.css",
+    "/css/dark-theme/plain-request-form.css": "/css/dark-theme/plain-request-form.css"
+}

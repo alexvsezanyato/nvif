@@ -11,21 +11,8 @@
 
         <link href="/fontawesome/css/all.css" rel="stylesheet">
 
-        <link href="/css/general.css" rel="stylesheet">
-        <link href="/css/header.css" rel="stylesheet">
-        <link href="/css/main-menu.css" rel="stylesheet">
-        <link href="/css/submenu.css" rel="stylesheet">
-        <link href="/css/breadcrumbs.css" rel="stylesheet">
-        <link href="/css/plain-request-form.css" rel="stylesheet">
-        <link href="/css/footer.css" rel="stylesheet">
-
-        <link href="/css/white-theme/header.css" rel="stylesheet">
-        <link href="/css/white-theme/main-menu.css" rel="stylesheet">
-        <link href="/css/white-theme/submenu.css" rel="stylesheet">
-        <link href="/css/white-theme/general.css" rel="stylesheet">
-        <link href="/css/white-theme/breadcrumbs.css" rel="stylesheet">
-        <link href="/css/white-theme/plain-request-form.css" rel="stylesheet">
-        <link href="/css/white-theme/footer.css" rel="stylesheet">
+        <link href="/css/skeleton.css" rel="stylesheet">
+        <link href="/css/white-theme.css" rel="stylesheet">
 
         <!--<link href="/css/dark-theme/general.css" rel="stylesheet">
         <link href="/css/dark-theme/submenu.css" rel="stylesheet">

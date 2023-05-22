@@ -17,11 +17,14 @@ mix.styles(
     'public/css/dark-theme.css'
 )
 
-{
-    const sourcePath = path.resolve(`./resources/css/skeleton/components`)
-    const destinationPath = path.resolve(`./public/css/skeleton/components`)
+const cssComponentDir = 'components'
+const cssDir = 'css'
+
+Array('skeleton', 'white-theme', 'dark-theme').forEach(cssType => {
+    const sourcePath = path.resolve(`./resources/${cssDir}/${cssType}/${cssComponentDir}`)
+    const destinationPath = path.resolve(`./public/${cssDir}/${cssType}`)
 
     fs.readdirSync(sourcePath).forEach(fileName => {
-        console.log([`${sourcePath}/${fileName}`, `${destinationPath}/${fileName}`])
+        mix.styles(`${sourcePath}/${fileName}`, `${destinationPath}/${fileName}`)
     })
-}
+})
