@@ -2,7 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Services\MailService;
-use App\Http\Controllers\FormController;
+
+use App\Http\Controllers\PageController;
+use App\Http\Controllers\BasketController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,32 +17,18 @@ use App\Http\Controllers\FormController;
 |
 */
 
-Route::get('/test/mail-request', function () {
+Route::get('/', [PageController::class, "index"]);
+Route::get('/contacts', [PageController::class, "contacts"]);
+Route::get('/basket', [BasketController::class, "index"]);
 
+Route::post('/basket/add', [BasketController::class, "add"]);
+Route::post('/basket/remove', [BasketController::class, "remove"]);
+Route::post('/form/request', [FormController::class, 'requestAction']);
+
+Route::get('/test/mail-request', function () {
     return view('mail.request', [
         "email" => "alo-alo@gmail.com",
         "name" => "Alex",
         "phone" => "8 (800) 555-35-35"
     ]);
-});
-
-Route::post('/form/request', [FormController::class, 'requestAction']);
-
-if (false) Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/', function () {
-    return view('main');
-});
-
-Route::get('/contacts', function () {
-    return view('contacts');
-});
-
-Route::get('/debug', function (Request $request) {
-    // dump($request::all());
-    // dd($request->ip());
-
-    dd($request::ip());
 });

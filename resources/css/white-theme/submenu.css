@@ -1,6 +1,4 @@
 .submenu .list .item .link {
-    /* background: hsla(220, 17%, 20%, .5); */
-    /* color: #fff; */
     background: #fff;
     color: #000;
     border-color: hsla(220, 15%, 70%, .5);
@@ -8,6 +6,11 @@
 
 .submenu .list .item .link:hover {
     background: hsla(220, 5%, 80%, .5);
+}
+
+.submenu .list .item .link:active {
+    /* background: hsla(220, 5%, 60%, .5); */
+    background: hsla(220, 15%, 70%, .5);
 }
 
 .submenu .list .item .catalog.link {
@@ -19,5 +22,11 @@
 .submenu .list .item .catalog.link:hover {
     background: hsla(140, 100%, 24%, 1);
     border-color: hsla(140, 100%, 24%, 1);
+    color: #fff;
+}
+
+.submenu .list .item .catalog.link:active {
+    background: hsla(140, 100%, 14%, 1);
+    border-color: hsla(140, 100%, 14%, 1);
     color: #fff;
 }

@@ -1,16 +1,13 @@
 @extends("layouts.main")
 
-@section("css")
-<link href="/css/pages/contacts.css" rel="stylesheet">
+@push("css")
+<link href="/css/skeleton/contacts.css" rel="stylesheet">
+<link href="/css/white-theme/contacts.css" rel="stylesheet">
+@endpush
 
-<link href="/css/white-theme/pages/contacts.css" rel="stylesheet">
-
-<!--<link href="/css/dark-theme/pages/contacts.css" rel="stylesheet">-->
-@endsection
-
-@section("breadcrumbs")
+@push("breadcrumbs")
 {{ Breadcrumbs::render('contacts') }}
-@endsection
+@endpush
 
 @section("content")
 <h1>Контакты</h1>

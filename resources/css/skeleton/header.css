@@ -12,7 +12,7 @@ header {
 
     height: 100px;
     width: 100%;
-    max-width: 900px;
+    max-width: 1000px;
 
     overflow: hidden;
     border-radius: 0 0 10px 10px;
@@ -74,6 +74,14 @@ header .general .schedule {
     padding-right: 10px;
 }
 
+header .general .contact-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
 header .general .telegram-icon {
     color: hsla(200, 100%, 46%, 1);
 }
@@ -82,13 +90,9 @@ header .general .whatsapp-icon {
     color: hsla(127, 66%, 55%, 1);
 }
 
-header .general .contact-icon:hover {
-    color: rgba(6, 82, 221, .8);
-}
-
 header .general .icon {
     font-size: 29px;
-    transition: color .1s;
+    transition: color .1s, background .1s;
 
     margin-right: 10px;
     width: 30px;
@@ -97,7 +101,13 @@ header .general .icon {
     min-height: 30px;
 }
 
+header .general .dark-mode {
+    display: flex;
+    align-items: center;
+}
+
 header .general .dark-mode-icon {
+    text-decoration: none;
     width: 30px;
     height: 30px;
 
@@ -112,6 +122,12 @@ header .general .dark-mode-icon {
     margin-right: 0;
     cursor: pointer;
     transition: color .1s, background .1s;
+
+    margin-right: 10px;
+}
+
+header .general .dark-mode:last-of-type .dark-mode-icon {
+    margin-right: 0;
 }
 
 header .general .phone-icon {
@@ -155,16 +171,18 @@ header .general .order-call {
     white-space: nowrap;
 }
 
-header .general .order-call:hover {
-    background: #0652DD;
-    color: #fff;
+header .logo-link {
+    border-radius: 5px;
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+    transition: background .3s;
 }
 
 header .logo {
-    width: 30px;
-    height: 30px;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
-    margin-right: 10px;
 }
 
 header .general .phone {

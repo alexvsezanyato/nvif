@@ -1,0 +1,40 @@
+.order-form {
+    background: #fff;
+    font-size: 14px;
+    border: 1px solid hsla(220, 15%, 70%, .5);
+    margin-bottom: 5px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.order-form .input-list {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.order-form .item {
+    display: flex;
+    height: 40px;
+    align-items: center;
+    border-bottom: 1px solid hsla(220, 15%, 70%, .5);
+}
+
+.order-form .item:last-of-type {
+    border-bottom: none;
+}
+
+.order-form .name {
+    width: 50%;
+    text-align: end;
+    padding-right: 10px;
+    font-weight: 900;
+}
+
+.order-form .value {
+    width: 50%;
+    height: 100%;
+    border: none;
+    padding: 10px;
+    border-left: 1px solid hsla(220, 15%, 70%, .5);
+}
+

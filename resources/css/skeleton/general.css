@@ -27,15 +27,10 @@ body {
     /* background: #fff!important; */
 }
 
-body > .wrapper > .top {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 body > .wrapper {
+    max-width: 1000px;
     width: 100%;
+    padding: 5px;
     min-height: 100vh;
 
     display: flex;
@@ -45,14 +40,25 @@ body > .wrapper {
 }
 
 body > .wrapper {
+    padding: 5px;
     padding-top: 100px;
 }
+
+body > .wrapper > .top {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+}
+
 
 .content {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex-grow: 1;
 }
 
 .slider {

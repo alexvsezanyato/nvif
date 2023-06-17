@@ -1,3 +1,20 @@
+
+.breadcrumb {
+    padding: 5px;
+}
+
+footer {
+    color: #fff;
+}
+
+footer .main-menu .link {
+    color: #fff;
+}
+
+body {
+    background: hsla(200, 5%, 95%, 1)
+}
+
 header .wrapper {
     background: #fff;
     border-color: hsla(220, 15%, 70%, .5);
@@ -69,4 +86,67 @@ header .general .contact-icon:hover {
 header .general .contact-icon:active {
     color: hsla(219, 10%, 20%, 1);
     /* background: hsla(219, 20%, 40%, .15); */
+}
+
+.main-menu .link {
+    color: #000;
+}
+
+.main-menu .link .link-text {
+    transition: background .1s;
+}
+
+.main-menu .link:hover .link-text {
+    /* background: hsla(220, 15%, 70%, .25); */
+    /* color: #555; */
+}
+
+.main-menu .link:active .link-text {
+    /* background: hsla(220, 15%, 70%, .4); */
+    /* color: #000; */
+}
+
+.main-menu .link-list .item:after {
+    background: rgba(0,0,0,0);
+}
+
+.main-menu .link-list .item:hover:after {
+    background: hsla(220, 15%, 70%, .5);
+}
+
+.main-menu .link-list .item:active:after {
+    background: hsla(220, 15%, 50%, .5);
+}
+
+.submenu .list .item .link {
+    background: #fff;
+    color: #000;
+    border-color: hsla(220, 15%, 70%, .5);
+}
+
+.submenu .list .item .link:hover {
+    background: hsla(220, 5%, 80%, .5);
+}
+
+.submenu .list .item .link:active {
+    /* background: hsla(220, 5%, 60%, .5); */
+    background: hsla(220, 15%, 70%, .5);
+}
+
+.submenu .list .item .catalog.link {
+    background: hsla(140, 100%, 30%, 1);
+    border-color: hsla(140, 100%, 30%, .5);
+    color: #fff;
+}
+
+.submenu .list .item .catalog.link:hover {
+    background: hsla(140, 100%, 24%, 1);
+    border-color: hsla(140, 100%, 24%, 1);
+    color: #fff;
+}
+
+.submenu .list .item .catalog.link:active {
+    background: hsla(140, 100%, 14%, 1);
+    border-color: hsla(140, 100%, 14%, 1);
+    color: #fff;
 }
