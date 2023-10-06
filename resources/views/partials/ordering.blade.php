@@ -3,9 +3,7 @@
 <link href="/css/white-theme/ordering.css" rel="stylesheet">
 @endpush
 
-<form action="/form/request" method="POST" class="order-form form">
-    @csrf
-
+<div>
     <div class="input-list" style="width:100%">
         <div class="item">
             <span class="name">Имя</span>
@@ -22,4 +20,6 @@
             <input class="value" type="text" name="email" placeholder="Эл. почта">
         </div>
     </div>
-</form>
+
+    <button type="submit" class="checkout-btn">Оформить заказ</button>
+</div>

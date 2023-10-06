@@ -53,9 +53,11 @@
 }
 
 footer {
+    width: 100%;
     padding-top: 0;
     max-width: 100%;
     height: 90px;
+    margin-top: 5px;
 }
 
 footer .container {
@@ -64,12 +66,11 @@ footer .container {
 
     display: flex;
     flex-direction: column;
-    background: url("/images/coal-2-modified.webp");
+    background: url("/images/other/coal-2-modified.webp");
     background-size: cover;
     background-position: center;
     background-size: no-repeat;
 
-    font-size: 14px;
     width: 100%;
     height: 100%;
 }
@@ -219,11 +220,6 @@ footer .general .phone {
 }
 
 @media screen and (max-width: 600px) {
-    footer .logo {
-        width: 40px;
-        height: 40px;
-    }
-
     footer .description {
         display: none;
     }
@@ -283,7 +279,6 @@ footer .general .order-call {
     color: #fff;
     /* border: 1px solid hsla(220, 17%, 14%, 1); */
     border: none;
-    font-size: 13px;
 
     padding: 0 10px;
     cursor: pointer;
@@ -315,11 +310,6 @@ footer .general .phone {
 }
 
 @media screen and (max-width: 600px) {
-    footer .logo {
-        width: 40px;
-        height: 40px;
-    }
-
     footer .description {
         display: none;
     }
@@ -333,16 +323,34 @@ footer .general .phone {
     }
 }
 
+:root {
+    --content-max-width: 1200px;
+}
+
 html {
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 16px;
+
+  font-size: 14px;
 }
 
 *, *:before, *:after {
   box-sizing: inherit;
+
   font-family: inherit;
   font-size: inherit;
+
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+    margin: 25px;
+    font-size: 33px;
+}
+
+h2 {
+    margin: 25px;
 }
 
 *[data-display-none] {
@@ -363,7 +371,7 @@ body {
 }
 
 body > .wrapper {
-    max-width: 1000px;
+    max-width: var(--content-max-width);
     width: 100%;
     padding: 5px;
     min-height: 100vh;
@@ -414,9 +422,8 @@ header {
 
     height: 100px;
     width: 100%;
-    max-width: 1000px;
+    max-width: var(--content-max-width);
 
-    overflow: hidden;
     border-radius: 0 0 10px 10px;
 }
 
@@ -427,18 +434,16 @@ header .wrapper {
     display: flex;
     flex-direction: column;
 
-    overflow: hidden;
     border-radius: 10px;
 
-    font-size: 14px;
     border: 1px solid;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .12);
 }
 
 header .container {
     height: 100%;
     width: 100%;
     padding-top: 5px;
-    background: hsla(200, 5%, 95%, 1);
     border-radius: 0 0 50% 50%;
 }
 
@@ -564,7 +569,6 @@ header .general .order-call {
     padding: 6px;
     border-radius: 10px;
     font-weight: 900;
-    font-size: 13px;
     border: none;
 
     padding: 0 10px;
@@ -585,6 +589,7 @@ header .logo {
     width: 100%;
     height: 100%;
     border-radius: 50%;
+    transition: opacity .1s;
 }
 
 header .general .phone {
@@ -592,18 +597,13 @@ header .general .phone {
     align-items: center;
 }
 
-@media screen and (max-width: 740px) {
+@media screen and (max-width: 900px) {
     header .general .description {
         display: none;
     }
 }
 
-@media screen and (max-width: 600px) {
-    header .logo {
-        width: 40px;
-        height: 40px;
-    }
-
+@media screen and (max-width: 640px) {
     header .description {
         display: none;
     }
@@ -621,10 +621,27 @@ header .general .phone {
     }
 }
 
+@media screen and (max-width: 500px) {
+    header .general .schedule {
+        display: none;
+    }
+
+    header .general .contact-icon {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    header .general .phone {
+        display: none;
+    }
+}
+
 .main-menu {
     display: flex;
     justify-content: space-between;
-    width: 100vw;
+    width: 100%;
+    /* width: 100vw; */
     overflow-x: auto;
     padding: 0 10px;
     max-width: 100%;
@@ -690,6 +707,7 @@ header .general .phone {
 
 .submenu {
     width: 100%;
+    overflow-x: auto;
 }
 
 .submenu .list {
@@ -706,9 +724,19 @@ header .general .phone {
     margin-right: 5px;
 }
 
+.submenu .list .item .link.catalog i {
+    margin-right: 10px;
+}
+
+.submenu .list .item .link.catalog {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
 .submenu .list .item .link {
-    border-radius: 6px;
-    padding: 8px;
+    /* border-radius: 6px; */
+    border-radius: 50px;
+    padding: 8px 12px;
     text-decoration: none;
     font-size: 14px;
     font-weight: 900;

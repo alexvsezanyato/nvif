@@ -10,45 +10,81 @@ class BasketController extends Controller
     public function index(Request $request) {
         $basket = $request->session()->get("basket");
 
-        if ($basket) $products = Products::find($basket);
-        else $products = null;
+        if (!$basket) {
+            return view("basket", [
+                "pageType" => "basket",
+                "products" => [],
+            ]);
+        }
+
+        $productIds = [];
+
+        foreach ($basket as $basketItem) {
+            $productIds[] = $basketItem["product-id"];
+        }
+
+        if ($productIds) $products = Products::find($productIds);
+        else $products = [];
 
         return view("basket", [
+            "pageType" => "basket",
             "products" => $products,
         ]);
     }
 
+    public function checkout(Request $request) {
+        $products = $request->post("products");
+
+        echo "<pre>";
+        print_r($products);
+        exit;
+    }
+
     public function add(Request $request) {
         $productID = $request->post("product-id");
+        if (!$productID) return $this->fail();
 
-        if (!$productID) return false;
+        $amount = $request->post("amount");
+        if (!$amount) return $this->fail();
 
         $basket = $request->session()->get("basket");
 
         if (!$basket) $basket = [];
 
-        if (!in_array($productID, $basket)) $basket[] = $productID;
-        else return false;
+        $basket[$productID] = [
+            "product-id" => $productID,
+            "amount" => $amount,
+        ];
 
         $request->session()->put("basket", $basket);
-
-        return true;
+        return $this->success();
     }
 
     public function remove(Request $request) {
         $productID = $request->post("product-id");
-        if (!$productID) return false;
+        if (!$productID) return $this->fail();
 
         $basket = $request->session()->get("basket");
-        if (!$basket) return false;
+        if (!$basket) return $this->fail();
 
-        $index = array_search((string) $productID, $basket);
-        if ($index === false) return false;
+        if (!isset($basket[$productID])) return $this->fail();
 
-        unset($basket[$index]);
-
+        unset($basket[$productID]);
         $request->session()->put("basket", $basket);
 
-        return true;
+        return $this->success();
+    }
+
+    private function fail() {
+        return ["status" => false];
+    }
+
+    private function success() {
+        $price = $this->getPrice();
+
+        return [
+            "status" => true,
+            "price" => number_format($price, 0, ".", " "),
+        ];
     }
 }

@@ -16,6 +16,8 @@ class PageController extends Controller
     }
 
     public function contacts() {
-        return view("contacts");
+        return view("contacts", [
+            "hideSubmenu" => true
+        ]);
     }
 }

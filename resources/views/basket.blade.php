@@ -3,6 +3,7 @@
 @push("css")
 <link href="/css/skeleton/products.css" rel="stylesheet">
 <link href="/css/white-theme/products.css" rel="stylesheet">
+<link href="/css/skeleton/ordering.css" rel="stylesheet">
 @endpush
 
 @push("js")
@@ -11,18 +12,28 @@
 @endpush
 
 @section("content")
-<div id="basket" class="products">
-@if ($products)
-@each("partials/product", $products, "product")
-@else
-<div class="no-product">
-    <div class="icon"><i class="fa-solid fa-basket-shopping"></i></div>
-    <div class="text">В корзине нет товаров</div>
-</div>
-@endif
-</div>
+<form action="/basket/checkout" method="POST" class="form order-form">
+    @csrf
 
-@if ($products)
-@include("partials/ordering")
-@endif
+    @if ($products)
+        <div id="basket" class="products">
+        @foreach ($products as $product)
+            @include("partials/product")
+        @endforeach
+        </div>
+    @else
+        <div class="no-product">
+            <div class="icon">
+                <i class="fa-solid fa-basket-shopping"></i>
+                <span class="count">0</span>
+            </div>
+
+            <div class="text">В корзине нет товаров</div>
+        </div>
+    @endif
+
+    @if ($products)
+    @include("partials/ordering")
+    @endif
+</form>
 @endsection("content")

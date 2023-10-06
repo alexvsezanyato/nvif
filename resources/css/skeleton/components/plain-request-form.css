@@ -2,8 +2,8 @@
     /* padding: 5px; */
     /* padding-top: 0; */
     padding-right: 61.5px;
-    font-size: 13px;
     width: 100%;
+    max-width: 500px;
 
     display: flex;
     align-items: center;
@@ -37,6 +37,7 @@
 }
 
 .request-form {
+    position: relative;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -104,6 +105,45 @@
     transition: background .1s;
 }
 
+.request-form .result {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: none;
+    backdrop-filter: none;
+    transition: all .2s ease-out;
+}
+
+.request-form .result[data-visible="true"] {
+    backdrop-filter: blur(1px);
+}
+
+.request-form .result[data-status="success"] {
+    background: hsla(127, 66%, 55%, .2);
+}
+
+.request-form .result[data-status="error"] {
+    background: hsla(8, 100%, 59%, .2);
+}
+
+.request-form .result .message {
+    border-radius: 10px;
+    display: inline-flex;
+    border-radius: 50px;
+    background: #fff;
+    border-radius: 50px;
+    /* border: 1px solid hsla(127, 66%, 55%, 1); */
+    /* background: hsl(145, 63%, 49%, .7); */
+    padding: 8px 12px;
+    display: inline-flex;
+    color: #000;
+}
+
 @media screen and (max-width: 600px) {
     .request-form {
         padding-top: 0;
@@ -112,6 +152,12 @@
 }
 
 @media screen and (max-width: 800px) {
+    .slider .request-form {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1200px) {
     .slider .request-form {
         display: none;
     }

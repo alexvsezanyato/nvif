@@ -1,3 +1,7 @@
+:root {
+    --main-background-color: hsl(0, 0%, 98%);
+}
+
 body {
-    background: hsla(200, 5%, 95%, 1)
+    background: var(--main-background-color);
 }

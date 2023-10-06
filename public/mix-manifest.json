@@ -1,8 +1,10 @@
 {
+    "/js/bundle.js": "/js/bundle.js",
     "/css/skeleton.css": "/css/skeleton.css",
     "/css/white-theme.css": "/css/white-theme.css",
     "/css/dark-theme.css": "/css/dark-theme.css",
     "/css/skeleton/contacts.css": "/css/skeleton/contacts.css",
+    "/css/skeleton/landing.css": "/css/skeleton/landing.css",
     "/css/skeleton/main.css": "/css/skeleton/main.css",
     "/css/skeleton/ordering.css": "/css/skeleton/ordering.css",
     "/css/skeleton/plain-request-form.css": "/css/skeleton/plain-request-form.css",

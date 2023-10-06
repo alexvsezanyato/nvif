@@ -5,6 +5,9 @@ use App\Services\MailService;
 
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\BasketController;
+use Illuminate\Http\Request;
+
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,13 +20,41 @@ use App\Http\Controllers\BasketController;
 |
 */
 
-Route::get('/', [PageController::class, "index"]);
-Route::get('/contacts', [PageController::class, "contacts"]);
-Route::get('/basket', [BasketController::class, "index"]);
+Route::get('/', [
+    PageController::class,
+    "index",
+])->name("index");
 
-Route::post('/basket/add', [BasketController::class, "add"]);
-Route::post('/basket/remove', [BasketController::class, "remove"]);
-Route::post('/form/request', [FormController::class, 'requestAction']);
+Route::get('/contacts', [
+    PageController::class,
+    "contacts",
+])->name("contacts");
+
+Route::get('/basket', [
+    BasketController::class,
+    "index",
+])->name("basket");
+
+Route::post('/basket/add', [
+    BasketController::class,
+    "add",
+])->name("basket.add");
+
+Route::post('/basket/remove', [
+    BasketController::class,
+    "remove"
+])->name("basket.remove");
+
+Route::post('/basket/checkout', [
+    BasketController::class,
+    'checkout'
+])->name("basket.checkout");
+
+// Route::resource('/posts', PostController::class);
+
+Route::get('/testing', function(Request $request) {
+    return view('testing');
+})->name("debug");
 
 Route::get('/test/mail-request', function () {
     return view('mail.request', [

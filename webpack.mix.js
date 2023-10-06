@@ -3,17 +3,17 @@ const fs = require('fs')
 const path = require('path')
 
 mix.styles(
-    'resources/css/skeleton/*.css',
+    'resources/css/skeleton/*',
     'public/css/skeleton.css'
 )
 
 mix.styles(
-    'resources/css/white-theme/*.css',
+    'resources/css/white-theme/*',
     'public/css/white-theme.css'
 )
 
 mix.styles(
-    'resources/css/dark-theme/*.css',
+    'resources/css/dark-theme/*',
     'public/css/dark-theme.css'
 )
 
@@ -28,3 +28,8 @@ Array('skeleton', 'white-theme', 'dark-theme').forEach(cssType => {
         mix.styles(`${sourcePath}/${fileName}`, `${destinationPath}/${fileName}`)
     })
 })
+
+mix.js(
+    'resources/js/*',
+    'public/js/bundle.js'
+)

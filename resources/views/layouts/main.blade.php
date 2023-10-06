@@ -28,7 +28,8 @@
         <link href="/css/dark-theme/footer.css" rel="stylesheet">-->
 
         @stack("css")
-        @stack("js")
+        <link rel="script" href="/js/bundle.js">
+        <!--@stack("js")-->
     </head>
 
     <body>
@@ -39,11 +40,20 @@
                         <div class="wrapper">
                             <div class="row general">
                                 <div class="row">
-                                    <a href="/" class="logo-link"><img src="/images/logo.webp" class="logo" alt="logo"></a>
+                                    <span class="dark-mode">
+                                        <span class="icon dark-mode-icon" style="margin-left:0"><i style="font-size:16px" class="fa-solid fa-bars"></i></span>
+                                    </span>
+
+                                    <a href="/" class="logo-link"><img src="/images/logo/logo.webp" class="logo" alt="logo"></a>
                                     <span class="description">Достаквка угля и древесины</span>
                                 </div>
 
                                 <div class="row">
+                                    <span class="dark-mode">
+                                        <span><span data-js="price">{{ number_format($price, 0, ".", " ") }}</span>&nbsp<span>руб.</span></span>
+                                        <a href="/basket" class="icon dark-mode-icon"><i class="fa-solid fa-basket-shopping"></i></a>
+                                    </span>
+
                                     <span class="schedule">Пн.-Пт.</span>
 
                                     <span class="whatsapp">
@@ -60,11 +70,6 @@
                                     </span>
 
                                     <button class="order-call">Заказать звонок</button>
-
-                                    <span class="dark-mode">
-                                        <a href="/basket" class="icon dark-mode-icon"><i class="fa-solid fa-basket-shopping"></i></a>
-                                        <span>0 руб.</span>
-                                    </span>
 
                                     <span class="dark-mode">
                                         <button class="icon dark-mode-icon"><i class="fa-solid fa-moon"></i></button>
@@ -93,14 +98,16 @@
                     </div>
                 </header>
 
+                @if (empty($hideSubmenu) || !$hideSubmenu)
                 <nav class="row submenu">
                     <ul class="list">
-                        <li class="item"><a class="link catalog" href="{{ $submenu['catalog']['link'] }}"><i class="fa-solid fa-list-ul"></i> {{ $submenu['catalog']['name'] }}</a></li>
+                        <!--<li class="item"><a class="link catalog" href="{{ $submenu['catalog']['link'] }}"><i class="fa-solid fa-list-ul"></i> {{ $submenu['catalog']['name'] }}</a></li>-->
                         @foreach ($submenu['categories'] as $category)
                         <li class="item"><a class="link" href="/catalog/{{ $category['link'] }}">{{ $category['name'] }}</a></li>
                         @endforeach
                     </ul>
                 </nav>
+                @endif
 
                 @yield("breadcrumbs")
 
@@ -115,7 +122,7 @@
                 <div class="container">
                     <div class="row general">
                         <div class="row">
-                            <img src="/images/logo.webp" class="logo" alt="logo">
+                            <img src="/images/logo/logo.webp" class="logo" alt="logo">
                             <span class="description">Достаквка угля и древесины</span>
                         </div>
 
@@ -157,5 +164,7 @@
                 </div>
             </footer>
         </div>
+
+        <script src="/js/bundle.js"></script>
     </body>
 </html>
