@@ -7,11 +7,13 @@ use App\Services\MailService;
 use PHPMailer\PHPMailer\PHPMailer;
 use Mail;
 use App\Mail\RequestMail;
+
 use App\Events\OrderArrived;
+use App\Events\CallRequested;
 
 class FormController extends Controller
 {
-    public function requestAction(Request $request, PHPMailer $phpMailer) {
+    public function order(Request $request, PHPMailer $phpMailer) {
         OrderArrived::dispatch($request->post());
 
         # Mail::to(env("MAIL_RECIEVER"))->send(new RequestMail($request->post()));
@@ -45,5 +47,14 @@ class FormController extends Controller
 
         # echo "<pre>";
         # var_dump($mail);
+    }
+
+    public function call(Request $request) {
+        CallRequested::dispatch($request->post());
+
+        return json_encode([
+            "status" => "success",
+            "message" => "Ваша заявка принята",
+        ]);
     }
 }
