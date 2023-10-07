@@ -21,8 +21,8 @@ const cssComponentDir = 'components'
 const cssDir = 'css'
 
 Array('skeleton', 'white-theme', 'dark-theme').forEach(cssType => {
-    const sourcePath = path.resolve(`./resources/${cssDir}/${cssType}/${cssComponentDir}`)
-    const destinationPath = path.resolve(`./public/${cssDir}/${cssType}`)
+    const sourcePath = path.resolve(`resources/${cssDir}/${cssType}/${cssComponentDir}`)
+    const destinationPath = path.resolve(`public/${cssDir}/${cssType}`)
 
     fs.readdirSync(sourcePath).forEach(fileName => {
         mix.styles(`${sourcePath}/${fileName}`, `${destinationPath}/${fileName}`)
@@ -30,6 +30,16 @@ Array('skeleton', 'white-theme', 'dark-theme').forEach(cssType => {
 })
 
 mix.js(
-    'resources/js/*',
+    'resources/js/*.js',
     'public/js/bundle.js'
 )
+
+const jsComponentDir = "components"
+const jsDir = 'js'
+
+const sourcePath = path.resolve(`resources/${jsDir}/${jsComponentDir}`)
+const destinationPath = path.resolve(`public/${jsDir}`)
+
+fs.readdirSync(sourcePath).forEach(fileName => {
+    mix.js(`${sourcePath}/${fileName}`, `${destinationPath}/${fileName}`)
+})

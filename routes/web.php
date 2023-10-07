@@ -55,11 +55,3 @@ Route::post('/basket/checkout', [
 Route::get('/testing', function(Request $request) {
     return view('testing');
 })->name("debug");
-
-Route::get('/test/mail-request', function () {
-    return view('mail.request', [
-        "email" => "alo-alo@gmail.com",
-        "name" => "Alex",
-        "phone" => "8 (800) 555-35-35"
-    ]);
-});

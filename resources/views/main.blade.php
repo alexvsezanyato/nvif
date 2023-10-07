@@ -18,6 +18,7 @@
 
 @push("js")
 <script src="/js/products.js"></script>
+<script src="/js/form-handler.js"></script>
 @endpush
 
 @section("main-slider")
@@ -34,11 +35,11 @@
                     </div>
                 </div>
 
-                <div class="request">
-                    <!--<h2 class="form-title">Оставьте завявку и мы перезвоним</h2>-->
+                <div class="request" style="display: flex; flex-direction: column">
+                    <span class="form-title source" style="font-size: 14px; font-weight: 400; color: rgba(255,255,255, 1); border-color: rgba(255,255,255, 1); width:fit-content; margin-bottom: 10px;">Оставьте завявку и мы перезвоним</span>
 
                     <div class="row">
-                        <form action="/form/request" method="POST" class="request-form form">
+                        <form action="/api/call-request" method="POST" class="request-form form">
                             <div class="result" style="display:none"><span class="message"></span></div>
 
                             <input type="hidden" name="_token" value="{{ csrf_token() }}" />

@@ -124,11 +124,11 @@
 }
 
 .request-form .result[data-status="success"] {
-    background: hsla(127, 66%, 55%, .2);
+    background: hsla(127, 66%, 55%, .1);
 }
 
 .request-form .result[data-status="error"] {
-    background: hsla(8, 100%, 59%, .2);
+    background: hsla(8, 100%, 59%, .1);
 }
 
 .request-form .result .message {

@@ -28,8 +28,8 @@
         <link href="/css/dark-theme/footer.css" rel="stylesheet">-->
 
         @stack("css")
-        <link rel="script" href="/js/bundle.js">
-        <!--@stack("js")-->
+        <link rel="script" href="{{ asset('/js/bundle.js') }}">
+        @stack("js")
     </head>
 
     <body>

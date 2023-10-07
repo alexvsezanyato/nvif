@@ -17,3 +17,14 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::post('/call-request', function (Request $request) {
+    $name  = $request->post('name');
+    $phone = $request->post('phone');
+    $email = $request->post('email');
+
+    return json_encode([
+        'status' => 'success',
+        'message' => 'Заявка принята',
+    ]);
+});

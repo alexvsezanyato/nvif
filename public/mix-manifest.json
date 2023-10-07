@@ -1,5 +1,7 @@
 {
     "/js/bundle.js": "/js/bundle.js",
+    "/js/form-handler.js": "/js/form-handler.js",
+    "/js/products.js": "/js/products.js",
     "/css/skeleton.css": "/css/skeleton.css",
     "/css/white-theme.css": "/css/white-theme.css",
     "/css/dark-theme.css": "/css/dark-theme.css",
