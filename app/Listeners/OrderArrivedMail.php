@@ -6,7 +6,7 @@ use App\Events\OrderArrived;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
 
-class OrderArrivedMail extends ShouldQueue
+class OrderArrivedMail
 {
     public $delay = "30";
     public $queue = "mails";

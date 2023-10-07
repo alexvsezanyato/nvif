@@ -18,10 +18,6 @@ class MailServiceProvider extends ServiceProvider
         $this->app->bind(PHPMailer::class, function(Application $app) {
             return new PHPMailer(true);
         });
-
-        $this->app->bind(PHPMailer::class, function(Application $app) {
-            return new PHPMailer();
-        });
     }
 
     /**

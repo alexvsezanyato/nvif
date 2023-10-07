@@ -9,7 +9,7 @@ use Mail;
 use App\Mail\RequestMail;
 
 use App\Events\OrderArrived;
-use App\Events\CallRequested;
+use App\Events\CallbackRequested;
 
 class FormController extends Controller
 {
@@ -50,7 +50,7 @@ class FormController extends Controller
     }
 
     public function call(Request $request) {
-        CallRequested::dispatch($request->post());
+        CallbackRequested::dispatch($request->post());
 
         return json_encode([
             "status" => "success",
