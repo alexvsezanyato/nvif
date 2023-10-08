@@ -28,6 +28,13 @@ h2 {
     margin: 25px;
 }
 
+.source {
+    padding: 5px 10px;
+    border: 1px dashed #000;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
 *[data-display-none] {
     display: none;
 }

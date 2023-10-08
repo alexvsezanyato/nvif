@@ -21,6 +21,17 @@
             @include("partials/product")
         @endforeach
         </div>
+
+        <template id="no-product-template">
+                <div class="no-product">
+                    <div class="icon">
+                        <i class="fa-solid fa-basket-shopping"></i>
+                        <span class="count">0</span>
+                    </div>
+
+                    <div class="text">В корзине нет товаров</div>
+                </div>
+        </template>
     @else
         <div class="no-product">
             <div class="icon">
@@ -36,4 +47,5 @@
     @include("partials/ordering")
     @endif
 </form>
+
 @endsection("content")

@@ -140,13 +140,6 @@ h2 {
     font-size: 24px;
 }
 
-.source {
-    padding: 5px 10px;
-    border: 1px dashed #000;
-    border-radius: 5px;
-    margin-top: 5px;
-}
-
 .calculator {
     position: relative;
     width: 100%;

@@ -45,9 +45,9 @@
                             <input type="hidden" name="_token" value="{{ csrf_token() }}" />
 
                             <div class="input-list">
-                                <input type="text" name="name" placeholder="Имя">
-                                <input type="text" name="phone" placeholder="Телефон">
-                                <input type="text" name="email" placeholder="Эл. почта">
+                                <input type="text" name="name" placeholder="Имя" required>
+                                <input type="tel" name="phone" placeholder="Телефон" required>
+                                <input type="email" name="email" placeholder="Эл. почта" required>
 
                                 <div data-display-none class="response">Ваша заявка принята</div>
                             </div>
@@ -89,15 +89,11 @@
     </div>
 </div>
 
-<span class="source">Некоторые фото взяты с сайта <a href="https://www.freepik.com/">Freepick</a></span>
-
 <h2>Эти и другие товары уже ждут вас</h2>
 
 <div class="products">
     @each("partials/product", $products, "product")
 </div>
-
-<span class="source">Некоторые фото взяты с сайта <a href="https://www.freepik.com/">Freepick</a></span>
 
 <h2>Популярные категории</h2>
 

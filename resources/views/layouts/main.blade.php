@@ -116,6 +116,8 @@
                 <div class="content">
                 @yield("content", "Скоро здесь будет контент")
                 </div>
+
+                <span class="source">Изображения взяты с сайта <a style="color: hsla(200, 100%, 35%, 1); text-decoration: none" href="https://www.freepik.com/">Freepick</a></span>
             </div>
 
             <footer>

@@ -8,6 +8,7 @@ use Illuminate\Queue\InteractsWithQueue;
 
 use Mail;
 use App\Mail\CallbackRequested as CallbackRequestedMail;
+use App\Mail\CallbackRequestMailToClient;
 
 class CallbackRequestMail
 {
@@ -22,6 +23,9 @@ class CallbackRequestMail
         {
             Mail::to(env("MAIL_RECIEVER"))
                 ->send(new CallbackRequestedMail($event->getData()));
+
+            Mail::to($data["email"])
+                ->send(new CallbackRequestMailToClient($event->getData()));
         }
     }
 }

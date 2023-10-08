@@ -3,6 +3,7 @@
 <table style="
     border-collapse: separate;
     border-spacing: 0 15px;
+    font-size: 14px;
 ">
     <tr>
         <td style="padding-right: 10px"><b>Email</b></td>

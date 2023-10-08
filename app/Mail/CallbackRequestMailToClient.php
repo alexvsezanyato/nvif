@@ -26,7 +26,7 @@ class CallbackRequestMailToClient extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Callback Request Mail To Client',
+            subject: '[coal.ru] Заявка на звонок',
         );
     }
 

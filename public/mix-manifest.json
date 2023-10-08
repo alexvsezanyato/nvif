@@ -1,7 +1,10 @@
 {
     "/js/bundle.js": "/js/bundle.js",
+    "/js/basket.js": "/js/basket.js",
     "/js/form-handler.js": "/js/form-handler.js",
+    "/js/keep.js": "/js/keep.js",
     "/js/products.js": "/js/products.js",
+    "/js/products.old.js": "/js/products.old.js",
     "/css/skeleton.css": "/css/skeleton.css",
     "/css/white-theme.css": "/css/white-theme.css",
     "/css/dark-theme.css": "/css/dark-theme.css",
@@ -13,6 +16,7 @@
     "/css/skeleton/products.css": "/css/skeleton/products.css",
     "/css/white-theme/contacts.css": "/css/white-theme/contacts.css",
     "/css/white-theme/main.css": "/css/white-theme/main.css",
+    "/css/white-theme/ordering.css": "/css/white-theme/ordering.css",
     "/css/white-theme/plain-request-form.css": "/css/white-theme/plain-request-form.css",
     "/css/white-theme/products.css": "/css/white-theme/products.css",
     "/css/dark-theme/contacts.css": "/css/dark-theme/contacts.css",

@@ -1,0 +1,26 @@
+.order-form .checkout-btn {
+    background: hsla(140, 100%, 30%, 1);
+    color: #fff;
+}
+
+.order-form .checkout-btn:hover {
+    background: hsla(140, 100%, 24%, 1);
+}
+
+.order-form .checkout-btn:active {
+    background: hsla(140, 100%, 14%, 1);
+}
+
+.order-form .input-list {
+    background: #fff;
+    border-color: hsla(220, 15%, 70%, .5);
+}
+
+.order-form .input-list .item {
+    border-color: hsla(220, 15%, 70%, .5);
+}
+
+.order-form .input-list .value {
+    border-color: hsla(220, 15%, 70%, .5);
+}
+

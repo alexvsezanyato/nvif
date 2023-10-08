@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
         priceBlock.innerHTML = price
     }
 
-    async function updateTotalPrice(data) {
+    function updateTotalPrice(data, onload = false) {
         const formData = new FormData()
 
         formData.append("product-id", data.productId)
@@ -16,23 +16,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
         formData.append("_token", csrf)
 
-        let response = null
-
-        try {
-            response = await fetch(`/basket/${action}`, {
-                method: "POST",
-                body: formData,
-                widthCredentials: true,
-            })
-
-            response = await response.json()
-        } catch (e) {
-            console.error(e)
-        }
-
-        if (response.price) {
-            updateTotalPriceHtml(response.price)
-        }
+        fetch(`/basket/${action}`, {
+            method: "POST",
+            body: formData,
+            widthCredentials: true,
+        }).then(r => r.json()).then(response => {
+            if (response.price) {
+                updateTotalPriceHtml(response.price)
+            }
+        })
     }
 
     document.addEventListener("click", function(clickEvent) {
@@ -59,14 +51,13 @@ document.addEventListener("DOMContentLoaded", () => {
             amount: input.value
         })
 
-        if (inCart && notInCart) {
-            inCart.classList.remove("hidden")
-            notInCart.classList.add("hidden")
-        }
+        inCart.classList.remove("hidden")
+        notInCart.classList.add("hidden")
     })
 
     document.addEventListener("click", function(clickEvent) {
         const target = clickEvent.target.closest(`[data-js=togglable]`)
+        // if (target.dataset.js !== "togglable") return
         if (!target) return
 
         const wrapper = target.closest(".cart-wrapper")
@@ -88,20 +79,47 @@ document.addEventListener("DOMContentLoaded", () => {
             action = "remove"
         }
 
-        updateTotalPrice({
-            productId: target.dataset.id,
-            amount: (action === "add") ? product.querySelector("[name=count]").value : 0
-        })
+        const productID = target.dataset.id
 
-        if (inCart && notInCart) {
+        const data = new FormData()
+
+        data.append("product-id", productID)
+        data.append("_token", csrf)
+
+        if (action === "add") {
+            const amount = product.querySelector("[name=count]").value
+            data.append("amount", amount)
+        }
+
+        const request = new XMLHttpRequest()
+
+        request.onload = function() {
+            let response = null
+
+            try {
+                response = JSON.parse(request.responseText)
+            } catch (e) {
+                console.error(e)
+                return
+            }
+
+            if (!response.status) return
+
+            if (response.price) {
+                updateTotalPriceHtml(response.price)
+            }
+
             inCart.classList.toggle("hidden")
             notInCart.classList.toggle("hidden")
         }
+
+        request.open("POST", `/basket/${action}`)
+        request.send(data)
     })
 
-    document.addEventListener("click", async clickEvent => {
-        const target = clickEvent.target.closest("[data-js=removable]")
-        if (!target) return
+    document.addEventListener("click", function(clickEvent) {
+        const target = clickEvent.target
+        if (target.dataset.js !== "removable") return
 
         const productContainer = target.closest("[data-js=product-container]")
 
@@ -111,30 +129,33 @@ document.addEventListener("DOMContentLoaded", () => {
         data.append("product-id", productID)
         data.append("_token", csrf)
 
-        let response = null
+        const request = new XMLHttpRequest()
 
-        try {
-            response = await fetch(`/basket/remove`, {
-                method: "POST",
-                body: data,
-                widthCredentials: true,
-            })
+        request.onload = function() {
+            let response = null
 
-            response = await response.json()
-        } catch (e) {
-            console.error(e)
-            return
+            try {
+                response = JSON.parse(request.responseText)
+            } catch (e) {
+                console.error(e)
+                return
+            }
+
+            if (!response.status) return
+
+            if (response.price) {
+                updatePrice(response.price)
+            }
+
+            if (!productContainer) {
+                console.error("The product conainter isn't found")
+                return
+            }
+
+            productContainer.remove()
         }
 
-        if (response.price) {
-            updateTotalPriceHtml(response.price)
-        }
-
-        if (!productContainer) {
-            console.error("The product conainter isn't found")
-            return
-        }
-
-        productContainer.remove()
+        request.open("POST", `/basket/remove`)
+        request.send(data)
     })
 })
