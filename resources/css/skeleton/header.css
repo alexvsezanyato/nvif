@@ -98,6 +98,17 @@ header .general .icon {
     min-height: 30px;
 }
 
+header .general .cost {
+    border-radius: 50px;
+    background: hsla(220, 15%, 70%, .22);
+    padding-left: 16px;
+    margin-right: 10px;
+}
+
+header .general .cost .icon {
+    margin-right: 0;
+}
+
 header .general .dark-mode {
     display: flex;
     align-items: center;

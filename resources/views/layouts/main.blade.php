@@ -16,20 +16,9 @@
 
         <script>const csrf = "{{ csrf_token() }}";</script>
 
-        <!--<link href="/css/skeleton.css" rel="stylesheet">-->
-        <!--<link href="/css/white-theme.css" rel="stylesheet">-->
-
-        <!--<link href="/css/dark-theme/general.css" rel="stylesheet">
-        <link href="/css/dark-theme/submenu.css" rel="stylesheet">
-        <link href="/css/dark-theme/breadcrumbs.css" rel="stylesheet">
-        <link href="/css/dark-theme/header.css" rel="stylesheet">
-        <link href="/css/dark-theme/main-menu.css" rel="stylesheet">
-        <link href="/css/dark-theme/plain-request-form.css" rel="stylesheet">
-        <link href="/css/dark-theme/footer.css" rel="stylesheet">-->
-
         @stack("css")
-        <link rel="script" href="{{ asset('/js/bundle.js') }}">
-        @stack("js")
+        <link rel="preload" as="script" href="{{ asset('/js/functions.js') }}">
+        <link rel="preload" as="script" href="{{ asset('/js/bundle.js') }}">
     </head>
 
     <body>
@@ -49,8 +38,8 @@
                                 </div>
 
                                 <div class="row">
-                                    <span class="dark-mode">
-                                        <span><span data-js="price">{{ number_format($price, 0, ".", " ") }}</span>&nbsp<span>руб.</span></span>
+                                    <span class="dark-mode cost">
+                                        <span><span data-js="price"><span style="font-size: 14px">&#8381;</span>&nbsp;{{ number_format($price, 0, ".", " ") }}</span></span>
                                         <a href="/basket" class="icon dark-mode-icon"><i class="fa-solid fa-basket-shopping"></i></a>
                                     </span>
 
@@ -105,6 +94,7 @@
                         @foreach ($submenu['categories'] as $category)
                         <li class="item"><a class="link" href="/catalog/{{ $category['link'] }}">{{ $category['name'] }}</a></li>
                         @endforeach
+                        <li class="item"><a class="link" href="/catalog">Все категории</a></li>
                     </ul>
                 </nav>
                 @endif
@@ -167,6 +157,8 @@
             </footer>
         </div>
 
-        <script src="/js/bundle.js"></script>
+        <script src="{{ asset('/js/functions.js') }}"></script>
+        <script src="{{ asset('/js/bundle.js') }}"></script>
+        @stack("js")
     </body>
 </html>

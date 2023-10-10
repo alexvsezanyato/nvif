@@ -1,4 +1,4 @@
-.no-product {
+.basket-content .no-product {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -7,7 +7,7 @@
     margin-top: 5px;
 }
 
-.no-product .icon {
+.basket-content .no-product .icon {
     margin-bottom: 5px;
     font-size: 25px;
     position: relative;
@@ -16,7 +16,7 @@
     text-align: center;
 }
 
-.no-product .icon .count {
+.basket-content .no-product .icon .count {
     position: absolute;
     top: -10px;
     font-size: 13px;
@@ -33,9 +33,19 @@
     justify-content: center;
 }
 
-.no-product .text {
+.basket-content .no-product .text {
     background: #fff;
     border-radius: 5px;
     padding: 10px;
     font-weight: 700;
+}
+
+.basket-content .state.success .text {
+    color: hsla(140, 100%, 10%, 1);
+    background: hsla(140, 100%, 30%, .25);
+}
+
+.basket-content .state.error .text {
+    color: hsla(8, 100%, 40%, 1);
+    background: hsla(8, 100%, 60%, .25);
 }

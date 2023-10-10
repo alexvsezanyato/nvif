@@ -2,6 +2,11 @@
     background: #fff;
 }
 
+.request .form-title {
+    color: rgba(255,255,255, 1);
+    border-color: rgba(255,255,255, 1);
+}
+
 .request-form .input-list input {
     border-bottom-color: hsla(220, 5%, 70%, .5);
     /* background: rgba(255,255,255,.95); */

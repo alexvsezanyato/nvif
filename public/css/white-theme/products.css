@@ -8,16 +8,16 @@
 }
 
 .product .count .option {
-    background: hsla(220, 50%, 80%, .4);
+    background: hsla(140, 100%, 30%, .25);
     transition: background .1s;
 }
 
 .product .count .option:hover {
-    background: hsla(220, 50%, 70%, .4)
+    background: hsla(140, 100%, 30%, .4);
 }
 
 .product .count .option:active {
-    background: hsla(220, 50%, 60%, .4);
+    background: hsla(140, 100%, 30%, .6);
 }
 
 .product .cart {
@@ -36,18 +36,18 @@
 }
 
 .product .cart .icon {
-    background: hsla(220, 50%, 80%, .3);
+    background: rgba(255, 255, 255, .2);
 }
 
 .product .cart.in {
-    background: hsla(220, 50%, 80%, .4);
-    color: #333;
+    background: hsla(140, 100%, 30%, .25);
+    color: #000;
 }
 
 .product .cart.in:hover {
-    background: hsla(220, 50%, 70%, .4)
+    background: hsla(140, 100%, 30%, .4);
 }
 
-.product .count .option:active {
-    background: hsla(220, 50%, 60%, .4);
+.product .cart.in:active {
+    background: hsla(140, 100%, 30%, .6);
 }

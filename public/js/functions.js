@@ -1,13 +1,42 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
-/******/ 	var __webpack_modules__ = ({
-
-/***/ "./resources/js/components/functions.js":
+/******/ 	// The require scope
+/******/ 	var __webpack_require__ = {};
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+var __webpack_exports__ = {};
 /*!**********************************************!*\
   !*** ./resources/js/components/functions.js ***!
   \**********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   updateCarts: () => (/* binding */ updateCarts),
@@ -92,126 +121,5 @@ function updateCarts(productID, amount, action) {
     }
   });
 }
-
-/***/ })
-
-/******/ 	});
-/************************************************************************/
-/******/ 	// The module cache
-/******/ 	var __webpack_module_cache__ = {};
-/******/ 	
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/ 		// Check if module is in cache
-/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
-/******/ 		if (cachedModule !== undefined) {
-/******/ 			return cachedModule.exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = __webpack_module_cache__[moduleId] = {
-/******/ 			// no module.id needed
-/******/ 			// no module.loaded needed
-/******/ 			exports: {}
-/******/ 		};
-/******/ 	
-/******/ 		// Execute the module function
-/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
-/******/ 	
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/ 	
-/************************************************************************/
-/******/ 	/* webpack/runtime/define property getters */
-/******/ 	(() => {
-/******/ 		// define getter functions for harmony exports
-/******/ 		__webpack_require__.d = (exports, definition) => {
-/******/ 			for(var key in definition) {
-/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
-/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
-/******/ 				}
-/******/ 			}
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
-/******/ 	(() => {
-/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/make namespace object */
-/******/ 	(() => {
-/******/ 		// define __esModule on exports
-/******/ 		__webpack_require__.r = (exports) => {
-/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 			}
-/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/************************************************************************/
-var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
-(() => {
-/*!*********************************************!*\
-  !*** ./resources/js/components/products.js ***!
-  \*********************************************/
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _functions_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./functions.js */ "./resources/js/components/functions.js");
-
-document.addEventListener("DOMContentLoaded", function () {
-  document.addEventListener("click", function (clickEvent) {
-    var selectedOption = clickEvent.target.closest(".option");
-    var isOption = selectedOption ? true : false;
-    if (!isOption) return;
-    var counter = selectedOption.closest(".count");
-    var optionType = selectedOption.getAttribute("data-option-type");
-    var input = counter.querySelector(".value");
-    var product = clickEvent.target.closest("[data-js=product]");
-    var inCart = product.querySelector(".in");
-    var notInCart = product.querySelector(".not-in");
-    if (optionType === "+") {
-      input.value++;
-    } else if (optionType === "-" && input.value > 1) {
-      input.value--;
-    }
-    _functions_js__WEBPACK_IMPORTED_MODULE_0__.updateTotalPrice({
-      productID: product.dataset.id,
-      amount: input.value
-    });
-    _functions_js__WEBPACK_IMPORTED_MODULE_0__.updateCarts(product.dataset.id, input.value, "add");
-    if (inCart && notInCart) {
-      // inCart.classList.remove("hidden")
-      // notInCart.classList.add("hidden")
-    }
-  });
-  document.addEventListener("click", function (clickEvent) {
-    var target = clickEvent.target.closest("[data-js=togglable]");
-    if (!target) return;
-    var wrapper = target.closest(".cart-wrapper");
-    var product = target.closest("[data-js=product]");
-    if (!product) {
-      console.error("Product block is not found");
-      return;
-    }
-    if (!wrapper) return;
-    var inCart = wrapper.querySelector(".in");
-    var notInCart = wrapper.querySelector(".not-in");
-    var action = target.classList.contains("not-in") ? "add" : "remove";
-    var amount = action === "add" ? product.querySelector("[name=count]").value : 0;
-    _functions_js__WEBPACK_IMPORTED_MODULE_0__.updateTotalPrice({
-      productID: target.dataset.id,
-      amount: amount
-    });
-    _functions_js__WEBPACK_IMPORTED_MODULE_0__.updateCarts(target.dataset.id, amount, action);
-    if (inCart && notInCart) {
-      // inCart.classList.toggle("hidden")
-      // notInCart.classList.toggle("hidden")
-    }
-  });
-});
-})();
-
 /******/ })()
 ;

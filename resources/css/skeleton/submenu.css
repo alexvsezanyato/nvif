@@ -1,6 +1,13 @@
 .submenu {
     width: 100%;
     overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.submenu::-webkit-scrollbar {
+      width: 0;
+      height: 0;
 }
 
 .submenu .list {
@@ -33,6 +40,7 @@
     text-decoration: none;
     font-size: 14px;
     font-weight: 900;
+    white-space: nowrap;
 
     display: block;
     border: 1px solid;

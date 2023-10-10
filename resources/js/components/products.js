@@ -1,40 +1,6 @@
+import * as fn from "./functions.js"
+
 document.addEventListener("DOMContentLoaded", () => {
-    const priceBlock = document.querySelector("[data-js=price]")
-
-    function updateTotalPriceHtml(price) {
-        priceBlock.innerHTML = price
-    }
-
-    async function updateTotalPrice(data) {
-        const formData = new FormData()
-
-        formData.append("product-id", data.productId)
-        formData.append("amount", data.amount)
-
-        if (!data["amount"]) action = "remove"
-        else action = "add"
-
-        formData.append("_token", csrf)
-
-        let response = null
-
-        try {
-            response = await fetch(`/basket/${action}`, {
-                method: "POST",
-                body: formData,
-                widthCredentials: true,
-            })
-
-            response = await response.json()
-        } catch (e) {
-            console.error(e)
-        }
-
-        if (response.price) {
-            updateTotalPriceHtml(response.price)
-        }
-    }
-
     document.addEventListener("click", function(clickEvent) {
         const selectedOption = clickEvent.target.closest(".option")
         const isOption = selectedOption ? true : false
@@ -54,14 +20,16 @@ document.addEventListener("DOMContentLoaded", () => {
             input.value--;
         }
 
-        updateTotalPrice({
-            productId: product.getAttribute("data-id"),
+        fn.updateTotalPrice({
+            productID: product.dataset.id,
             amount: input.value
         })
 
+        fn.updateCarts(product.dataset.id, input.value, "add")
+
         if (inCart && notInCart) {
-            inCart.classList.remove("hidden")
-            notInCart.classList.add("hidden")
+            // inCart.classList.remove("hidden")
+            // notInCart.classList.add("hidden")
         }
     })
 
@@ -82,59 +50,22 @@ document.addEventListener("DOMContentLoaded", () => {
         const inCart = wrapper.querySelector(".in")
         const notInCart = wrapper.querySelector(".not-in")
 
-        if (target.classList.contains("not-in")) {
-            action = "add"
-        } else {
-            action = "remove"
-        }
+        let action = target.classList.contains("not-in") ? "add" : "remove"
 
-        updateTotalPrice({
-            productId: target.dataset.id,
-            amount: (action === "add") ? product.querySelector("[name=count]").value : 0
+        const amount = (action === "add")
+            ? product.querySelector("[name=count]").value
+            : 0
+
+        fn.updateTotalPrice({
+            productID: target.dataset.id,
+            amount,
         })
 
+        fn.updateCarts(target.dataset.id, amount, action)
+
         if (inCart && notInCart) {
-            inCart.classList.toggle("hidden")
-            notInCart.classList.toggle("hidden")
+            // inCart.classList.toggle("hidden")
+            // notInCart.classList.toggle("hidden")
         }
-    })
-
-    document.addEventListener("click", async clickEvent => {
-        const target = clickEvent.target.closest("[data-js=removable]")
-        if (!target) return
-
-        const productContainer = target.closest("[data-js=product-container]")
-
-        const productID = target.dataset.id
-        const data = new FormData()
-
-        data.append("product-id", productID)
-        data.append("_token", csrf)
-
-        let response = null
-
-        try {
-            response = await fetch(`/basket/remove`, {
-                method: "POST",
-                body: data,
-                widthCredentials: true,
-            })
-
-            response = await response.json()
-        } catch (e) {
-            console.error(e)
-            return
-        }
-
-        if (response.price) {
-            updateTotalPriceHtml(response.price)
-        }
-
-        if (!productContainer) {
-            console.error("The product conainter isn't found")
-            return
-        }
-
-        productContainer.remove()
     })
 })

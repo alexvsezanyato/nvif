@@ -35,8 +35,8 @@
                     </div>
                 </div>
 
-                <div class="request" style="display: flex; flex-direction: column">
-                    <span class="form-title source" style="font-size: 14px; font-weight: 400; color: rgba(255,255,255, 1); border-color: rgba(255,255,255, 1); width:fit-content; margin-bottom: 10px;">Оставьте завявку и мы перезвоним</span>
+                <div class="request">
+                    <span class="form-title source">Оставьте завявку и мы перезвоним</span>
 
                     <div class="row">
                         <form action="/api/call-request" method="POST" class="request-form form">

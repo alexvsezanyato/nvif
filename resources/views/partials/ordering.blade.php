@@ -3,7 +3,7 @@
 <link href="/css/white-theme/ordering.css" rel="stylesheet">
 @endpush
 
-<div>
+<div id="ordering">
     <div class="input-list" style="width:100%">
         <div class="item">
             <span class="name">Имя</span>
