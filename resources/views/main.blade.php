@@ -89,23 +89,29 @@
     </div>
 </div>
 
+@if ($products)
 <h2>Эти и другие товары уже ждут вас</h2>
 
 <div class="products">
     @each("partials/product", $products, "product")
 </div>
+@endif
 
+@if ($products)
 <h2>Популярные категории</h2>
 
 <div class="products">
     @each("partials/product", $products, "product")
 </div>
+@endif
 
+@if ($products)
 <h2>Обзор популярных товаров</h2>
 
 <div class="products">
     @each("partials/product", $products, "product")
 </div>
+@endif
 
 <!--
 <h2>Калькулятор стоимости</h2>
