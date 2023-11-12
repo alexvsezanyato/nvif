@@ -388,6 +388,41 @@ body > .wrapper > .top {
     font-weight: 700;
 }
 
+.categories {
+    display: grid;
+    list-style-type: none;
+    width: 100%;
+    max-width: var(--content-max-width);
+    padding: 0 5px;
+    gap: 5px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.categories .item {
+    flex-shrink: 0;
+    height: 200px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.categories .item .background-filter {
+    background: rgba(0,0,0,.5);
+    width: 100%;
+    height: 100%;
+}
+
+.categories .item .link {
+    color: #fff;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    font-weight: 900;
+    padding: 25px;
+    font-size: 16px;
+    display: flex;
+    align-items: flex-end;
+}
+
 header {
     top: 0;
     position: fixed;

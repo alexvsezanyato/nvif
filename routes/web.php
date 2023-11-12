@@ -5,6 +5,7 @@ use App\Services\MailService;
 
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\BasketController;
+use App\Http\Controllers\CatalogController;
 use Illuminate\Http\Request;
 
 use App\Http\Controllers\PostController;
@@ -32,6 +33,11 @@ Route::get('/contacts', [
 
 Route::get('/basket', [
     BasketController::class,
+    "index",
+])->name("basket");
+
+Route::get('/catalog', [
+    CatalogController::class,
     "index",
 ])->name("basket");
 
