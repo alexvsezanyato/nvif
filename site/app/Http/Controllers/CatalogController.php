@@ -10,7 +10,7 @@ class CatalogController extends Controller
     public function index(Request $request) {
         $products = Products::all();
 
-        return view("catalog", [
+        return view("pages.catalog.catalog", [
             "products" => $products
         ]);
     }

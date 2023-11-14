@@ -135,6 +135,7 @@
                     <div class="title">О сайте</div>
                     <ul class="items">
                         <li class="item"><a class="link" href="#">Заказть разработку</a></li>
+                        <li class="item"><a class="link" href="#">Деловое предложение</a></li>
                         <li class="item"><a class="link" href="#">Лицензионное соглашение</a></li>
                     </ul>
                 </div>

@@ -9,9 +9,10 @@ class BasketController extends Controller
 {
     public function index(Request $request) {
         $basket = $request->session()->get("basket");
+        $view = "pages.catalog.basket";
 
         if (!$basket) {
-            return view("basket", [
+            return view($view, [
                 "pageType" => "basket",
                 "products" => [],
             ]);
@@ -26,7 +27,7 @@ class BasketController extends Controller
         if ($productIds) $products = Products::find($productIds);
         else $products = [];
 
-        return view("basket", [
+        return view($view, [
             "pageType" => "basket",
             "products" => $products,
         ]);

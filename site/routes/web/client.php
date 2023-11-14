@@ -21,25 +21,24 @@ use App\Http\Controllers\PostController;
 |
 */
 
-Route::controller(Page::class)->group(
-    function() {
+Route::controller(Page::class)
+    ->group(function() {
         Route::get('/', 'index')->name('index');
         Route::get('/contacts', 'contacts')->name('contacts');
-    }
-);
+    });
 
-Route::prefix('catalog')->controller(Catalog::class)->group(
-    function() {
+Route::controller(Catalog::class)
+    ->prefix('catalog')
+    ->group(function() {
         Route::get('/', 'index')->name('basket');
-    }
-);
+    });
 
-Route::prefix('basket')->controller(Basket::class)->group(
-    function() {
+Route::controller(Basket::class)
+    ->prefix('basket')
+    ->group(function() {
         Route::get('/', 'index')->name('basket');
 
         Route::post('/add', 'add')->name('basket.add');
         Route::post('/remove', 'remove')->name('basket.remove');
         Route::post('/checkout', 'checkout')->name('basket.checkout');
-    }
-);
+    });

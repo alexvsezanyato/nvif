@@ -26,6 +26,7 @@
 }
 
 footer {
+    padding: 0 5px;
     margin-top: 30px;
     margin-bottom: 30px;
     display: grid;
@@ -217,6 +218,7 @@ header {
     top: 0;
     position: fixed;
     width: 100%;
+    z-index: 3000;
 
     padding: 5px;
     padding-top: 0;
