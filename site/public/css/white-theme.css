@@ -2,13 +2,6 @@
     padding: 5px;
 }
 
-footer {
-    color: #fff;
-}
-
-footer .main-menu .link {
-    color: #fff;
-}
 
 :root {
     --main-background-color: hsl(0, 0%, 98%);

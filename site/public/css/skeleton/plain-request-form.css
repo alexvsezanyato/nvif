@@ -19,10 +19,12 @@
 }
 
 .request .form-title {
-    font-weight: 400;
-    font-size: 15px;
+    font-weight: 700;
+    font-size: 17px;
     margin-bottom: 10px;
-    backdrop-filter: saturate(180%) blur(5px);
+    /* color: transparent; */
+    /* -webkit-background-clip: text; */
+    /* background-clip: text; */
 }
 
 .request .row {

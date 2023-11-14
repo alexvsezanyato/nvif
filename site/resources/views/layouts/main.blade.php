@@ -107,52 +107,45 @@
                 @yield("content", "Скоро здесь будет контент")
                 </div>
 
-                <span class="source">Изображения взяты с сайта <a style="color: hsla(200, 100%, 35%, 1); text-decoration: none" href="https://www.freepik.com/">Freepick</a></span>
+                <span class="image-source">Изображения взяты с сайта <a style="color: hsla(200, 100%, 35%, 1); text-decoration: none" href="https://www.freepik.com/">Freepick</a></span>
             </div>
 
             <footer>
-                <div class="container">
-                    <div class="row general">
-                        <div class="row">
-                            <img src="/images/logo/logo.webp" class="logo" alt="logo">
-                            <span class="description">Достаквка угля и древесины</span>
-                        </div>
+                <div class="column">
+                    <div class="title">Каталог</div>
+                    <ul class="items">
+                        @foreach ($submenu['categories'] as $category)
+                        <li class="item"><a class="link" href="/catalog/{{ $category['link'] }}">{{ $category['name'] }}</a></li>
+                        @endforeach
+                        <li class="item"><a class="link" href="/catalog">Все категории</a></li>
+                    </ul>
+                </div>
 
-                        <div class="row">
-                            <span class="schedule">Пн.-Пт.</span>
+                <div class="column">
+                    <div class="title">О нас</div>
+                    <ul class="items">
+                        <li class="item"><a class="link" href="#">Отзывы</a></li>
+                        <li class="item"><a class="link" href="#">Где находимся</a></li>
+                        <li class="item"><a class="link" href="#">Куда доставляем</a></li>
+                        <li class="item"><a class="link" href="#">Деловое предложение</a></li>
+                    </ul>
+                </div>
 
-                            <span class="whatsapp">
-                                <a href="tel:89963900000" class="whatsapp-icon icon"><i class="fa-brands fa-whatsapp"></i></a>
-                            </span>
+                <div class="column">
+                    <div class="title">О сайте</div>
+                    <ul class="items">
+                        <li class="item"><a class="link" href="#">Заказть разработку</a></li>
+                        <li class="item"><a class="link" href="#">Лицензионное соглашение</a></li>
+                    </ul>
+                </div>
 
-                            <span class="telegram">
-                                <a href="tel:89963900000" class="telegram-icon icon"><i class="fa-brands fa-telegram"></i></i></a>
-                            </span>
-
-                            <span class="phone">
-                                <!--<a href="tel:89963900000" class="phone-icon icon"><i class="fa-solid fa-phone"></i></a>-->
-                                <a href="tel:89963900000" class="phone-number">8 (996) 390-00-00</a>
-                            </span>
-
-                            <button class="order-call">Заказать звонок</button>
-
-                            <span class="dark-mode">
-                                <button class="icon dark-mode-icon"><i class="fa-solid fa-moon"></i></button>
-                            </span>
-                        </div>
-                    </div>
-
-                    <nav class="row main-menu">
-                        <ul class="link-list">
-                            <li class="item"><a class="link" href="/">Главная</a></li>
-                            <li class="item"><a class="link" href="/catalog">Каталог</a></li>
-                        </ul>
-
-                        <ul class="link-list">
-                            <li class="item contact-link"><a class="link" href="/contacts">Контакты</a></li>
-                            <!--<li class="search"><i class="fa-solid fa-magnifying-glass"></i></li>-->
-                        </ul>
-                    </nav>
+                <div class="column">
+                    <div class="title">Контакты</div>
+                    <ul class="items">
+                        <li class="item"><a class="link" href="#">8 (996) 390-00-00</a></li>
+                        <li class="item"><a class="link" href="#">Whatsapp</a></li>
+                        <li class="item"><a class="link" href="#">Telegram</a></li>
+                    </ul>
                 </div>
             </footer>
         </div>

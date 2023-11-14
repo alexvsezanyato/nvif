@@ -3,8 +3,9 @@
 }
 
 .request .form-title {
-    color: rgba(255,255,255, 1);
-    border-color: rgba(255,255,255, 1);
+    /* background-image: linear-gradient(to bottom right, #c8d6e5, #f7d794); */
+    /* color: #c8d6e5; */
+    color: #fff;
 }
 
 .request-form .input-list input {

@@ -1,0 +1,39 @@
+#!/bin/bash
+
+if [ ! -f ./site/.env ]; then
+    echo "Error: site/.env does not exist"
+    echo "You can create it using cp ./env ./site/.env"
+
+    exit 1
+fi
+
+docker run \
+  --rm \
+  --detach \
+  --volume coal:/var/lib/mysql \
+  --net coal \
+  --name coal-mysql \
+  --add-host=host.docker.internal:host-gateway \
+  custom:mysql5.7.21
+
+docker run \
+  --volume ./site:/site \
+  --rm \
+  --detach \
+  --net coal \
+  --name coal-php-fpm \
+  --add-host=host.docker.internal:host-gateway \
+  --user 1000 \
+  custom:php8.2.5-fpm
+
+docker run \
+  --rm \
+  --detach \
+  --volume ./site:/site \
+  --volume ./volumes/log/nginx:/var/log/nginx \
+  --volume ./volumes/nginx:/etc/nginx \
+  --net coal \
+  --name coal-nginx \
+  --add-host=host.docker.internal:host-gateway \
+  --publish 8080:8080 \
+  custom:nginx1.12.1

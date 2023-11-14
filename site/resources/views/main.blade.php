@@ -36,7 +36,7 @@
                 </div>
 
                 <div class="request">
-                    <span class="form-title source">Оставьте завявку и мы перезвоним</span>
+                    <span class="form-title">Оставьте завявку и мы перезвоним</span>
 
                     <div class="row">
                         <form action="/api/call-request" method="POST" class="request-form form">
