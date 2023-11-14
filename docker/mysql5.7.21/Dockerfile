@@ -1,5 +1,3 @@
-# FROM mysql:5.7.21
-
 FROM mysql/mysql-server:8.0
 LABEL maintainer="aleksandr.stepin@intelsib-team.com"
 
