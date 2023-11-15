@@ -2,7 +2,7 @@
 
 if [ ! -f ./site/.env ]; then
     echo "Error: site/.env does not exist"
-    echo "You can create it using cp ./env ./site/.env"
+    echo "You can create it using cp ./env.docker ./site/.env"
 
     exit 1
 fi
