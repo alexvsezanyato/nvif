@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Products;
+use App\Models\Product;
+use App\Services\BasketService;
 
 class BasketController extends Controller
 {
@@ -24,7 +25,7 @@ class BasketController extends Controller
             $productIds[] = $basketItem["product-id"];
         }
 
-        if ($productIds) $products = Products::find($productIds);
+        if ($productIds) $products = Product::find($productIds);
         else $products = [];
 
         return view($view, [
@@ -33,7 +34,8 @@ class BasketController extends Controller
         ]);
     }
 
-    public function checkout(Request $request) {
+    #[NoReturn]
+    public function checkout(Request $request): void {
         $products = $request->post("products");
 
         echo "<pre>";
@@ -41,7 +43,7 @@ class BasketController extends Controller
         exit;
     }
 
-    public function add(Request $request) {
+    public function add(Request $request): array {
         $productID = $request->post("product-id");
         if (!$productID) return $this->fail();
 
@@ -61,7 +63,7 @@ class BasketController extends Controller
         return $this->success();
     }
 
-    public function remove(Request $request) {
+    public function remove(Request $request): array {
         $productID = $request->post("product-id");
         if (!$productID) return $this->fail();
 
@@ -76,12 +78,13 @@ class BasketController extends Controller
         return $this->success();
     }
 
-    private function fail() {
+    private function fail(): array {
         return ["status" => false];
     }
 
-    private function success() {
-        $price = $this->getPrice();
+    private function success(): array {
+        $basketService = app()->make(BasketService::class);
+        $price = $basketService->getTotalPrice();
 
         return [
             "status" => true,

@@ -1,3 +1,5 @@
+echo 'root' | passwd --stdin root
+
 groupadd --gid ${UID} coal
 useradd --uid ${UID} --gid ${GID} --groups www-data --shell /bin/bash coal --create-home
 usermod --groups coal www-data

@@ -1,0 +1,10 @@
+#!/bin/fish
+
+function checkDotEnv
+  if not test -e "$projectRoot/site/.env"
+    echo "Error: $projectRoot/site/.env does not exist"
+    echo "See $projectRoot/env.docker config to set laravel DB connection correctly"
+
+    exit 1
+  end
+end

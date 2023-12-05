@@ -3,7 +3,7 @@
 namespace App\Actions;
 
 use Lorisleiva\Actions\Concerns\AsAction;
-use App\Models\Products;
+use App\Models\Product;
 
 class GetProductsByID
 {
@@ -14,7 +14,7 @@ class GetProductsByID
         $products = [];
 
         foreach ($ids as $id) {
-            $product = Products::where(["id" => $id])
+            $product = Product::where(["id" => $id])
                 ->first()
                 ->toArray();
 

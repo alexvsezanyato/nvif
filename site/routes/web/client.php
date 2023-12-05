@@ -9,6 +9,7 @@ use App\Http\Controllers\CatalogController as Catalog;
 use Illuminate\Http\Request;
 
 use App\Http\Controllers\PostController;
+use App\Http\Middleware\ShareTemplateDataWithView;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,20 +23,23 @@ use App\Http\Controllers\PostController;
 */
 
 Route::controller(Page::class)
-    ->group(function() {
+    ->middleware('web')
+    ->group(function () {
         Route::get('/', 'index')->name('index');
         Route::get('/contacts', 'contacts')->name('contacts');
     });
 
 Route::controller(Catalog::class)
     ->prefix('catalog')
-    ->group(function() {
-        Route::get('/', 'index')->name('basket');
+    ->group(function () {
+        Route::get('/', 'index')->name('catalog');
+        Route::get('/{category:slug}', 'category')->name('category');
+        Route::get('/{category:slug}/{product:slug}', 'product')->name('product');
     });
 
 Route::controller(Basket::class)
     ->prefix('basket')
-    ->group(function() {
+    ->group(function () {
         Route::get('/', 'index')->name('basket');
 
         Route::post('/add', 'add')->name('basket.add');

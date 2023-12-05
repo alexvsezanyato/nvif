@@ -26,12 +26,6 @@
 @if ($products)
 <h2>Каталог</h2>
 
-<div class="categories" style="margin-bottom: 5px">
-    @foreach ($submenu['categories'] as $category)
-    <li class="item" style="background: url('/images/product/wood-1.webp')"><div class="background-filter"><a class="link" href="/catalog/{{ $category['link'] }}">{{ $category['name'] }}</a></div></li>
-    @endforeach
-</div>
-
 <div class="products">
     @each("partials/product", $products, "product")
 </div>

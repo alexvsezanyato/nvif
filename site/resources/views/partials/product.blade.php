@@ -17,8 +17,13 @@
             </div>
             <div class="info">
                 <div class="middle">
-                    <div class="title">{{ $product["name"] }}</div>
-                    <div class="price"><span class="label">Цена:</span> <span class="value">{{ number_format($product["price"], 0, ".", " ") }}</span> <span class="currency">руб.</span></div>
+                    <a class="title" href="{{
+                        route("product", [
+                            "category" => $product->category->slug,
+                            "product" => $product->slug,
+                        ])
+                    }}">{{ $product->name }}</a>
+                    <div class="price"><span class="label">Цена:</span> <span class="value">{{ number_format($product->price, 0, ".", " ") }}</span> <span class="currency">руб.</span></div>
                 </div>
 
                 <div class="bottom">

@@ -3,12 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Products;
+use App\Models\Product;
 
 class PageController extends Controller
 {
     public function index(Request $request) {
-        $products = Products::all();
+        $products = Product::all();
 
         return view("pages.main", [
             "products" => $products

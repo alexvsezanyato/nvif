@@ -1,23 +1,22 @@
-#!/bin/bash
+#!/bin/fish
 
-if [ ! -f ./site/.env ]; then
-    echo "Error: site/.env does not exist"
-    echo "You can create it using cp ./env ./site/.env"
+source $scriptsDirectory/functions
+checkDotEnv
 
-    exit 1
-fi
+set port 8800
 
 docker run \
   --rm \
   --detach \
   --volume coal:/var/lib/mysql \
+  --volume $volumesDirectory/mysql/etc/my.cnf:/etc/my.cnf \
   --net coal \
   --name coal-mysql \
   --add-host=host.docker.internal:host-gateway \
   custom:mysql5.7.21
 
 docker run \
-  --volume ./site:/site \
+  --volume $projectRoot/site:/site \
   --rm \
   --detach \
   --net coal \
@@ -29,11 +28,14 @@ docker run \
 docker run \
   --rm \
   --detach \
-  --volume ./site:/site \
-  --volume ./volumes/log/nginx:/var/log/nginx \
-  --volume ./volumes/nginx:/etc/nginx \
+  --volume $projectRoot/site:/site \
+  --volume $volumesDirectory/nginx/var/log/nginx:/var/log/nginx \
+  --volume $volumesDirectory/nginx/etc/nginx:/etc/nginx \
   --net coal \
   --name coal-nginx \
   --add-host=host.docker.internal:host-gateway \
-  --publish 8080:8080 \
+  --publish $port:8080 \
   custom:nginx1.12.1
+
+echo
+echo "Published port: $port"

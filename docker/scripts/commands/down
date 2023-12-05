@@ -1,0 +1,7 @@
+#!/bin/fish
+
+echo "Stopping containers ..."
+
+docker stop coal-mysql
+docker stop coal-php-fpm
+docker stop coal-nginx

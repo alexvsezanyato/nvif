@@ -1,0 +1,13 @@
+#!/bin/fish
+
+docker run \
+  --rm \
+  --tty \
+  --interactive \
+  --user 1000 \
+  --volume $projectRoot/site:/site \
+  --net coal \
+  --publish 5173:5173 \
+  --add-host=host.docker.internal:host-gateway \
+  --name cc-node \
+  custom:node20.2.0 bash

@@ -2,6 +2,17 @@ const mix = require('laravel-mix')
 const fs = require('fs')
 const path = require('path')
 
+mix.options({
+    'cssModuleIdentifier': '[name]-[local]-[hash:base64:3]'
+})
+
+mix.alias({
+    '@': './resources/js/react',
+    '@images': './public/images'
+})
+
+mix.sourceMaps()
+
 mix.styles(
     'resources/css/skeleton/*',
     'public/css/skeleton.css'
@@ -30,16 +41,6 @@ Array('skeleton', 'white-theme', 'dark-theme').forEach(cssType => {
 })
 
 mix.js(
-    'resources/js/*.js',
-    'public/js/bundle.js'
-)
-
-const jsComponentDir = "components"
-const jsDir = 'js'
-
-const sourcePath = path.resolve(`resources/${jsDir}/${jsComponentDir}`)
-const destinationPath = path.resolve(`public/${jsDir}`)
-
-fs.readdirSync(sourcePath).forEach(fileName => {
-    mix.js(`${sourcePath}/${fileName}`, `${destinationPath}/${fileName}`)
-})
+    'resources/js/app.jsx',
+    'public/js/app.js',
+).react()

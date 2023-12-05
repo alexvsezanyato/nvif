@@ -1,0 +1,63 @@
+#!/bin/fish
+
+set -x tab (string repeat -n2 " ")
+
+set -x projectRoot (
+  dirname (
+    realpath (
+      status --current-filename
+    )
+  )
+)
+
+while not test -e "$projectRoot/.root" && [ $projectRoot != "/" ]
+  set -x projectRoot (dirname "$projectRoot")
+end
+
+if not test -e $projectRoot/.root || not test -e $projectRoot/site
+  echo "Error: cannot find the project root"
+  echo "It must contain .root file"
+  echo "It must contain site directory"
+
+  exit 1
+end
+
+set -x scriptsDirectory (
+  dirname (
+    realpath (
+      status --current-filename
+    )
+  )
+)
+
+set -x commandsDirectory $scriptsDirectory/commands
+set -x volumesDirectory $projectRoot/volumes
+
+if not test -e $commandsDirectory
+  echo "Error: commands directory does not exist"
+  echo "It must be $commandsDirectory"
+
+  exit 1
+end
+
+if test -z "$argv[1]" || [ $argv[1] = "--help" ]
+  echo "Command must be specified"
+  echo "Usage: container [command]"
+  echo
+  echo "Commands:"
+
+  for command in $commandsDirectory/*
+    echo $tab(basename $command)
+  end
+
+  exit 1
+end
+
+set target $commandsDirectory/$argv[1]
+
+if not test -e "$target"
+  echo "Command $argv[1] does not exist"
+  echo "Use --help to see all commands"
+else
+  exec $target "$projectRoot"
+end

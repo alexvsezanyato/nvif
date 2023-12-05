@@ -1,0 +1,15 @@
+#!/bin/fish
+
+source $scriptsDirectory/functions
+checkDotEnv
+
+echo "Creating network ..."
+docker network create --driver bridge coal
+
+echo "Creating volume ..."
+docker volume create --driver local coal
+
+docker build --tag custom:php8.2.5-fpm "$projectRoot/docker/php8.2.5-fpm"
+docker build --tag custom:mysql5.7.21  "$projectRoot/docker/mysql5.7.21"
+docker build --tag custom:nginx1.12.1  "$projectRoot/docker/nginx1.12.1"
+docker build --tag custom:node20.2.0   "$projectRoot/docker/node20.2.0"
