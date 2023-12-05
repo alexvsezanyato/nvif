@@ -23,7 +23,6 @@ use App\Http\Middleware\ShareTemplateDataWithView;
 */
 
 Route::controller(Page::class)
-    ->middleware('web')
     ->group(function () {
         Route::get('/', 'index')->name('index');
         Route::get('/contacts', 'contacts')->name('contacts');
